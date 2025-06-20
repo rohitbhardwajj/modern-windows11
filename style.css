@@ -99,7 +99,7 @@ html,body{
 }
 .arrowSectionTop{
     height: 60%;
-    background-color: green;
+    /* background-color: green; */
     width: 100%;
     padding: 20px 5px;
     display: flex;
@@ -112,13 +112,37 @@ html,body{
 .arrowSectionTopChild{
      height: 25%;
      width: 25%;
-     background-color: black;
+     background-color: rgba(62, 57, 57, 0.564);
      border-radius: 5px;
 }
+
 .arrowSectionMid{
     height: 30%;
-    background-color: rgb(128, 15, 0);
+    /* background-color: rgb(128, 15, 0); */
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    gap: 18px;
+}
+.arrowSectionMid .brightness , .volume {
+    width: 100%;
+    /* background-color: rgb(30, 0, 255); */
+      display: flex;
+    justify-content: space-evenly;
+   
+  
+}
+.arrowSectionMid .brightness input , .volume input {
+    width: 80%;
+    background-color: rgb(30, 0, 255);
+   
+}
+.arrowSectionMid .brightness   i , .volume i{
+   color: white;
+   
 }
 .arrowSectionbottom{
     height: 10%;
