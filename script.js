@@ -18,7 +18,7 @@ tl.from(arrowSection, {
 
 arrow.addEventListener("click", () => {
   if (flag) {
-    arrowSection.style.display = "block"; // Pehle visible karo
+    arrowSection.style.display = "block"; 
     tl.play();                             // Play timeline (slide in)
     flag = false;
   } else {
