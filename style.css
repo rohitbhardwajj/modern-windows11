@@ -144,7 +144,6 @@ html,body{
     display: none;
 }
 .cameraTopBar{
-    height: 6%;
     width: 100%;
     background-color: black;
     position: absolute;
@@ -161,7 +160,7 @@ html,body{
     align-items: center;
 }
 .cameraTopBarLft img{
-    height: 35px;
+    height: 30px;
 }
 .cameraTopBarLft  h6{
     font-size: 15px;
@@ -169,7 +168,7 @@ html,body{
     color: white;
 }
 .cameraTopBarRht{
-    width: 9%;
+    width: 10%;
     height: 100%;
     /* background-color: rgb(128, 0, 0); */
     display: flex;

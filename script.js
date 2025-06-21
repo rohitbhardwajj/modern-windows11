@@ -6,7 +6,9 @@ let cameraFeed = document.getElementById("cameraFeed");
 let camera = document.querySelector(".camera");
 let faminus = document.querySelector(".fa-minus");
 let faxmark = document.querySelector(".fa-xmark");
+let faexpand = document.querySelector(".fa-expand");
 let minimizeIconsCam = document.querySelector(".minimizeIconsCam");
+let cameraTopBarRht = document.querySelector(".cameraTopBarRht");
 let flag = true;
 
 
@@ -99,5 +101,20 @@ faxmark.addEventListener("click", ()=>{
      minimizeIconsCam.style.display = "none";
      openCameraBtn.style.backgroundColor = "rgba(62, 57, 57, 0.564)";
       isCameraOn= true;
+})
+let isExpand = true;
+faexpand.addEventListener("click", ()=>{
+  if(isExpand){
+    camera.style.height = "50%";
+    camera.style.width = "50%";
+    cameraTopBarRht.style.width = "20%"
+    isExpand = false;
+  }else{
+    
+    camera.style.height = "100%";
+    camera.style.width = "100%";
+    cameraTopBarRht.style.width = "10%"
+    isExpand = true;
+  }
 })
 
