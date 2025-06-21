@@ -37,6 +37,13 @@ let arrowMenu = ()=>{
   }
 }
 
+let reverseArrowmenuBar = ()=>{
+   tl.reverse();                          // Reverse timeline (slide out)
+    tl.eventCallback("onReverseComplete", () => {
+      arrowSection.style.display = "none"; // Fir display none
+    });
+    flag = true;
+}
 
 
 
@@ -64,11 +71,13 @@ arrowSectionTopChild.forEach((val)=>{
 let isCameraOn = true;
 
 openCameraBtn.addEventListener("click", async () => {
+      reverseArrowmenuBar()
       if(isCameraOn){
         camera.style.transform = "scale(1)";
         camera.style.transition = "all 0.3s ease";
        camera.style.display = "flex";
        isCameraOn = false;
+       
   }else{
      camera.style.display = "none";
      isCameraOn= true;
@@ -83,6 +92,7 @@ openCameraBtn.addEventListener("click", async () => {
 });
 
 faminus.addEventListener("click", () => {
+  reverseArrowmenuBar()
   camera.style.transform = "scale(0)";
   camera.style.transition = "all 0.3s ease";
   camera.style.position = "absolute";
@@ -91,19 +101,28 @@ faminus.addEventListener("click", () => {
   minimizeIconsCam.style.display = "initial";
 });
 minimizeIconsCam.addEventListener("click", ()=>{
+  reverseArrowmenuBar()
    camera.style.transform = "scale(1)";
      camera.style.display = "flex";
   camera.style.transition = "all 0.3s ease";
 })
 faxmark.addEventListener("click", ()=>{
+  reverseArrowmenuBar()
    camera.style.transform = "scale(0)";
     camera.style.transition = "all 0.3s ease";
      minimizeIconsCam.style.display = "none";
      openCameraBtn.style.backgroundColor = "rgba(62, 57, 57, 0.564)";
       isCameraOn= true;
 })
+
+
 let isExpand = true;
+
+
 faexpand.addEventListener("click", ()=>{
+   
+reverseArrowmenuBar()
+
   if(isExpand){
     camera.style.height = "50%";
     camera.style.width = "50%";
