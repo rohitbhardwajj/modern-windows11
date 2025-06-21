@@ -5,6 +5,7 @@ let openCameraBtn = document.getElementById("openCamera");
 let cameraFeed = document.getElementById("cameraFeed");
 let camera = document.querySelector(".camera");
 let faminus = document.querySelector(".fa-minus");
+let faxmark = document.querySelector(".fa-xmark");
 let minimizeIconsCam = document.querySelector(".minimizeIconsCam");
 let flag = true;
 
@@ -62,6 +63,8 @@ let isCameraOn = true;
 
 openCameraBtn.addEventListener("click", async () => {
       if(isCameraOn){
+        camera.style.transform = "scale(1)";
+        camera.style.transition = "all 0.3s ease";
        camera.style.display = "flex";
        isCameraOn = false;
   }else{
@@ -89,5 +92,12 @@ minimizeIconsCam.addEventListener("click", ()=>{
    camera.style.transform = "scale(1)";
      camera.style.display = "flex";
   camera.style.transition = "all 0.3s ease";
+})
+faxmark.addEventListener("click", ()=>{
+   camera.style.transform = "scale(0)";
+    camera.style.transition = "all 0.3s ease";
+     minimizeIconsCam.style.display = "none";
+     openCameraBtn.style.backgroundColor = "rgba(62, 57, 57, 0.564)";
+      isCameraOn= true;
 })
 
