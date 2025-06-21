@@ -4,6 +4,8 @@ let arrowSectionTopChild = document.querySelectorAll(".arrowSectionTopChild");
 let openCameraBtn = document.getElementById("openCamera");
 let cameraFeed = document.getElementById("cameraFeed");
 let camera = document.querySelector(".camera");
+let faminus = document.querySelector(".fa-minus");
+let minimizeIconsCam = document.querySelector(".minimizeIconsCam");
 let flag = true;
 
 
@@ -75,4 +77,17 @@ openCameraBtn.addEventListener("click", async () => {
   }
 });
 
+faminus.addEventListener("click", () => {
+  camera.style.transform = "scale(0)";
+  camera.style.transition = "all 0.3s ease";
+  camera.style.position = "absolute";
+  camera.style.display = "block";
+  isMinimized = true;
+  minimizeIconsCam.style.display = "initial";
+});
+minimizeIconsCam.addEventListener("click", ()=>{
+   camera.style.transform = "scale(1)";
+     camera.style.display = "flex";
+  camera.style.transition = "all 0.3s ease";
+})
 

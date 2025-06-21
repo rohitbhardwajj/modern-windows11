@@ -111,6 +111,12 @@ html,body{
     align-items: center;
     flex-wrap: wrap;
 }
+.minimizeIconsCam{
+    margin-left: 15px;
+    background-color: rgba(255, 68, 0, 0.308);
+    width: 16%;
+    display: none;
+}
 .arrowSectionTopChild:active{
     scale: .5;
 }
