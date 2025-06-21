@@ -253,4 +253,13 @@ html,body{
     align-items: center;
     color: white;
 }
+h1{
+    display:none;
+}
 
+@media (max-width:600px) {
+   *{
+    display: none;
+   }
+  
+}
