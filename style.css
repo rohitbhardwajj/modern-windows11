@@ -264,6 +264,12 @@ html,body{
 h1{
     display:none;
 }
+.overlay{
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    display: none;
+}
 
 @media (max-width:600px) {
    *{

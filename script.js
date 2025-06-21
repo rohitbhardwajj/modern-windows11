@@ -9,6 +9,11 @@ let faxmark = document.querySelector(".fa-xmark");
 let faexpand = document.querySelector(".fa-expand");
 let minimizeIconsCam = document.querySelector(".minimizeIconsCam");
 let cameraTopBarRht = document.querySelector(".cameraTopBarRht");
+let famoon = document.querySelector(".fa-moon");
+let overlay = document.querySelector(".overlay");
+let battery = document.querySelector(".battery");
+let aeroplane = document.querySelector(".aeroplane");
+let wifi = document.querySelector(".wifi");
 let flag = true;
 
 
@@ -136,5 +141,51 @@ reverseArrowmenuBar()
     isExpand = true;
   }
 })
+
+famoon.addEventListener("click" , ()=>{
+      overlay.style.opacity = "1";
+      overlay.style.display = "block";
+
+       camera.style.transition = "all 0.3s ease";
+       camera.style.backgroundColor = "red";
+})
+
+let isBatterysaveon = true;
+battery.addEventListener("click",()=>{
+    if(isBatterysaveon){
+    confirm("Are you sure to Turn on Battery Saver");
+    isBatterysaveon = false;
+    }else{
+          confirm("Are you sure to Turn off Battery Saver");
+    isBatterysaveon = true;
+    }
+})
+let isFlightmodeOn = true;
+let isWifiEnabled = true;
+
+aeroplane.addEventListener("click", () => {
+  if (isFlightmodeOn) {
+    const ans = confirm("Are you sure to Turn ON Flight Mode?");
+    if (ans) {
+      aeroplane.style.backgroundColor = "#004bb5";
+      wifi.style.opacity = "0.5";
+      wifi.style.pointerEvents = "none";
+      isWifiEnabled = false;
+      isFlightmodeOn = false;
+    }
+    // ❌ don't write else — warna cancel pe color change ho jaayega
+  } else {
+    const ans = confirm("Are you sure to Turn OFF Flight Mode?");
+    if (ans) {
+      aeroplane.style.backgroundColor = "rgba(62, 57, 57, 0.564)";
+      wifi.style.opacity = "1";
+      wifi.style.pointerEvents = "auto";
+      isWifiEnabled = true;
+      isFlightmodeOn = true;
+    }
+  }
+});
+
+
 
 
