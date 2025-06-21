@@ -116,6 +116,85 @@ html,body{
      width: 25%;
      background-color: rgba(62, 57, 57, 0.564);
      border-radius: 5px;
+     display: flex;
+      overflow: hidden;
+      justify-content: center;
+      align-items: center;
+      color: white;
+}
+.camera{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(37, 36, 36);
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    
+}
+.cameraTopBar{
+    height: 6%;
+    width: 100%;
+    background-color: rgb(37, 37, 117);
+    position: absolute;
+    top: 0%;
+    display: flex;
+    justify-content: space-between;
+}
+.cameraTopBarLft{
+    width: 20%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.cameraTopBarLft img{
+    height: 40px;
+}
+.cameraTopBarLft  h6{
+    font-size: 15px;
+    margin-left: 10px;
+}
+.cameraTopBarRht{
+    width: 20%;
+    height: 100%;
+    background-color: rgb(128, 0, 0);
+}
+#cameraFeed {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  background-color: red;
+}
+
+.arrowSectionSplit1{
+    height: 100%;
+    width: 70%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+   font-size: 15px;
+   border-right: 1px solid rgba(128, 128, 128, 0.347);
+}
+
+ .arrowSectionTopChild:hover{
+    background-color: rgb(128, 128, 128);
+}
+
+
+.arrowSectionSplit2{
+    height: 100%;
+    width: 30%;
+    /* background-color: rgb(128, 0, 0); */
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+     font-size: 9px;
 }
 
 .arrowSectionMid{

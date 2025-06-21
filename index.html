@@ -2,24 +2,59 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
+    <div class="camera">
+        <div class="cameraTopBar">
+            <div class="cameraTopBarLft">
+                <img src="./assets/camera.png" alt="">
+                <h6>Camera</h6>
+            </div>
+            <div class="cameraTopBarRht"></div>
+        </div>
+         <video id="cameraFeed" autoplay></video>
+    </div>
+   
     <div class="arrowSection">
         <div class="arrowSectionTop">
-            <div class="arrowSectionTopChild"></div>
-            <div class="arrowSectionTopChild"></div>
-            <div class="arrowSectionTopChild"></div>
-            <div class="arrowSectionTopChild"></div>
-            <div class="arrowSectionTopChild"></div>
-            <div class="arrowSectionTopChild"></div>
-            <div class="arrowSectionTopChild"></div>
-            <div class="arrowSectionTopChild"></div>
-            <div class="arrowSectionTopChild"></div>
+            <div class="arrowSectionTopChild" data-color = "#004bb5">
+                <div class="arrowSectionSplit1"><i class="fa-solid fa-wifi"></i></div>
+                <div class="arrowSectionSplit2"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+            <div class="arrowSectionTopChild" data-color = "#004bb5">
+                <div class="arrowSectionSplit1" ><i class="fa-brands fa-bluetooth-b"></i></div>
+                <div class="arrowSectionSplit2"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+            <div class="arrowSectionTopChild " data-color = "#189407">
+                <i class="fa-solid fa-battery-full"></i>
+            </div>
+            <div class="arrowSectionTopChild" data-color = "#004bb5">
+                <div class="arrowSectionSplit1"><i class="fa-solid fa-universal-access"></i></div>
+                <div class="arrowSectionSplit2"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+            <div class="arrowSectionTopChild" data-color = "#004bb5">
+               <i class="fa-solid fa-plane"></i>
+            </div>
+            <div class="arrowSectionTopChild" data-color = "#004bb5">
+               <i class="fa-solid fa-music"></i>
+            </div>
+            <div class="arrowSectionTopChild" >
+                <div class="arrowSectionSplit1"><i class="fa-solid fa-user"></i></div>
+                <div class="arrowSectionSplit2"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+            <div class="arrowSectionTopChild" data-color = "#004bb5">
+              <i class="fa-solid fa-moon"></i>
+            </div>
+            <div class="arrowSectionTopChild " id="openCamera" >
+               <i class="fa-solid fa-camera"></i>
+            </div>
+            
         </div>
         <div class="arrowSectionMid">
             <div class="brightness">
