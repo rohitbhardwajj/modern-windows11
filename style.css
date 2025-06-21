@@ -111,6 +111,9 @@ html,body{
     align-items: center;
     flex-wrap: wrap;
 }
+.arrowSectionTopChild:active{
+    scale: .5;
+}
 .arrowSectionTopChild{
      height: 25%;
      width: 25%;
