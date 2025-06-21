@@ -1,6 +1,9 @@
 let arrow = document.querySelector(".upArrow");
 let arrowSection = document.querySelector(".arrowSection");
 let arrowSectionTopChild = document.querySelectorAll(".arrowSectionTopChild");
+let openCameraBtn = document.getElementById("openCamera");
+let cameraFeed = document.getElementById("cameraFeed");
+let camera = document.querySelector(".camera");
 let flag = true;
 
 
@@ -52,15 +55,19 @@ arrowSectionTopChild.forEach((val)=>{
     })
 })
 
-let openCameraBtn = document.getElementById("openCamera");
-let cameraFeed = document.getElementById("cameraFeed");
+
+let isCameraOn = true;
 
 openCameraBtn.addEventListener("click", async () => {
+      if(isCameraOn){
+       camera.style.display = "flex";
+       isCameraOn = false;
+  }else{
+     camera.style.display = "none";
+     isCameraOn= true;
+  }
   try {
-    // Camera access lene ki request
     const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-
-    // Video tag me stream dikhana
     cameraFeed.srcObject = stream;
   } catch (error) {
     console.error("Camera access denied:", error);

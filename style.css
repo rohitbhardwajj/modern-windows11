@@ -120,6 +120,7 @@ html,body{
       overflow: hidden;
       justify-content: center;
       align-items: center;
+      transition: all ease-in-out .5s;
       color: white;
 }
 .camera{
@@ -131,12 +132,12 @@ html,body{
     align-items: center;
     flex-direction: column;
     position: relative;
-    
+    display: none;
 }
 .cameraTopBar{
     height: 6%;
     width: 100%;
-    background-color: rgb(37, 37, 117);
+    background-color: black;
     position: absolute;
     top: 0%;
     display: flex;
@@ -151,22 +152,38 @@ html,body{
     align-items: center;
 }
 .cameraTopBarLft img{
-    height: 40px;
+    height: 35px;
 }
 .cameraTopBarLft  h6{
     font-size: 15px;
     margin-left: 10px;
+    color: white;
 }
 .cameraTopBarRht{
-    width: 20%;
+    width: 9%;
     height: 100%;
-    background-color: rgb(128, 0, 0);
+    /* background-color: rgb(128, 0, 0); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+.cameraTopBarRht i {
+    color: white;
+    /* background-color: red; */
+    padding: 10px;
+    border-right: 1px solid rgba(128, 128, 128, 0.518);
+}
+.cameraTopBarRht i:hover{
+    background-color: gray;
+}
+
+
 #cameraFeed {
   width: 80%;
   height: 80%;
   object-fit: cover;
-  background-color: red;
+  background-color: rgb(58, 58, 239);
+  /* display: none; */
 }
 
 .arrowSectionSplit1{
