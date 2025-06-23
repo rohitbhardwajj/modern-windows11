@@ -338,6 +338,7 @@ h1{
     right: 1%;
     border-radius: 15px;
     padding: 10px 15px;
+    scale : 1;
 }
 .batteryUpper{
     width: 100%;

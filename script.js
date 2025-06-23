@@ -19,6 +19,8 @@ let windowbtn = document.querySelector(".windowbtn");
 let openGooglebtn = document.querySelector("#openGooglebtn");
 let timee = document.querySelector(".timee");
 let datee = document.querySelector(".date");
+let batterybtn = document.querySelector(".batterybtn");
+let batteryDiv = document.querySelector(".batteryDiv");
 
 let flag = true;
 
@@ -214,9 +216,24 @@ windowbtn.addEventListener("click", () => {
   isWindowOn = !isWindowOn; 
 });
 
-// openGooglebtn.addEventListener("click", () => {
-//   console.log("ee")
-// });
+let b1 = gsap.timeline({ paused: true });
+let isBatteryDivOn = true;
+b1.from(batteryDiv, {
+  y: "100%",
+  opacity: 0,
+  duration: 0.5,
+  ease: "power2.out"
+});
+
+batterybtn.addEventListener("click" , ()=>{
+  if (isBatteryDivOn) {
+    batteryDiv.style.scale = "1";
+    b1.play();
+  } else {
+    b1.reverse(); 
+  }
+  isBatteryDivOn = !isBatteryDivOn; 
+})
 
 
 
