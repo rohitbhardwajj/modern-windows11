@@ -16,6 +16,7 @@ let aeroplane = document.querySelector(".aeroplane");
 let wifi = document.querySelector(".wifi");
 let windows = document.querySelector(".windows");
 let windowbtn = document.querySelector(".windowbtn");
+let openGooglebtn = document.querySelector("#openGooglebtn");
 let flag = true;
 
 
@@ -210,6 +211,9 @@ windowbtn.addEventListener("click", () => {
   isWindowOn = !isWindowOn; 
 });
 
+// openGooglebtn.addEventListener("click", () => {
+//   console.log("ee")
+// });
 
 
 
