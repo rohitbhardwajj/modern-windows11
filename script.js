@@ -173,7 +173,7 @@ aeroplane.addEventListener("click", () => {
       isWifiEnabled = false;
       isFlightmodeOn = false;
     }
-    // ❌ don't write else — warna cancel pe color change ho jaayega
+
   } else {
     const ans = confirm("Are you sure to Turn OFF Flight Mode?");
     if (ans) {

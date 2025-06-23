@@ -271,6 +271,26 @@ h1{
     display: none;
 }
 
+.windows{
+    height: 60%;
+    width: 35%;
+    background-color: red;
+    position: absolute;
+    bottom: 10%;
+    left: 30%;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width:600px) {
    *{
     display: none;
