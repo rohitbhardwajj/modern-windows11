@@ -17,6 +17,9 @@ let wifi = document.querySelector(".wifi");
 let windows = document.querySelector(".windows");
 let windowbtn = document.querySelector(".windowbtn");
 let openGooglebtn = document.querySelector("#openGooglebtn");
+let timee = document.querySelector(".timee");
+let datee = document.querySelector(".date");
+
 let flag = true;
 
 
@@ -216,4 +219,14 @@ windowbtn.addEventListener("click", () => {
 // });
 
 
+
+
+
+
+setInterval(()=>{
+let date = new Date().toLocaleDateString('en-CA');
+let time = new Date().toLocaleTimeString('en-GB');
+   datee.innerHTML = date;
+   timee.innerHTML = time;
+},1000)
 

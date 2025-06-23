@@ -82,7 +82,21 @@ html,body{
     color: white;
     height: 100%;
     text-align: center;
+    /* background: red; */
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+.time h6{
+    /* background-color: pink; */
+    height: 50%;
+    font-size: 14px;
+}
+.time span{
+    /* background-color: green; */
+    height: 50%;
+    font-size: 9px;
+    width:100%
 }
 .arrowSection{
     height: 60%;
