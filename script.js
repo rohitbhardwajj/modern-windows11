@@ -14,6 +14,8 @@ let overlay = document.querySelector(".overlay");
 let battery = document.querySelector(".battery");
 let aeroplane = document.querySelector(".aeroplane");
 let wifi = document.querySelector(".wifi");
+let windows = document.querySelector(".windows");
+let windowbtn = document.querySelector(".windowbtn");
 let flag = true;
 
 
@@ -184,6 +186,28 @@ aeroplane.addEventListener("click", () => {
       isFlightmodeOn = true;
     }
   }
+});
+
+
+let isWindowOn = true;
+
+let w1 = gsap.timeline({ paused: true });
+
+w1.from(windows, {
+  y: "100%",
+  opacity: 0,
+  duration: 0.5,
+  ease: "power2.out"
+});
+
+windowbtn.addEventListener("click", () => {
+  if (isWindowOn) {
+    windows.style.display = "flex";
+    w1.play();
+  } else {
+    w1.reverse(); 
+  }
+  isWindowOn = !isWindowOn; 
 });
 
 

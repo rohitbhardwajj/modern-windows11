@@ -87,7 +87,7 @@ html,body{
 .arrowSection{
     height: 60%;
     width: 30%;
-      background-color: rgba(49, 45, 45, 0.356);
+          background-color: rgba(0, 0, 0, 0.559);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); 
     position: absolute;
@@ -274,12 +274,45 @@ h1{
 .windows{
     height: 60%;
     width: 35%;
-    background-color: red;
+      background-color: rgba(0, 0, 0, 0.559);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
     position: absolute;
     bottom: 10%;
     left: 30%;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    display: none;
 }
+.windowsInput{
+    height: 10%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.879);  
+    padding: 0px 9px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.windowsInput input{
+    height: 80%;
+    width: 90%;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+.windowsInput input:focus{
+   outline: none;
+  border: none; 
+}
+.windowsInput i{
+    color: rgb(11, 137, 205);
+}
+
+
 
 
 
