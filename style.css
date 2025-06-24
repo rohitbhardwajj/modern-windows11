@@ -392,7 +392,77 @@ h1{
     color: white;
 }
 
+.fullSetting{
+    height: 100%;
+    width: 100%;
+        background-color: rgba(14, 12, 12, 0.559);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+}
+.settinglft{
+    height: 100%;
+    width: 25%;
+    background-color: rgba(0, 0, 0, 0.107);
+        backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.user{
+    height: 10%;
+    width: 100%;
+    /* background-color: pink; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+   
+}
+.user img{
+    height: 40px;
+}
+.user h3{
+    color: white;
+    font-size: 15px;
+    font-family:  Arial, Helvetica, sans-serif;
+}
+.settingSearch{
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0px;
+}
+.settingSearch input{
+  width: 80%;
+  height: 5%;
+  border-radius: 10px;
+  padding: 0px 10px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgba(128, 128, 128, 0.568);
+}
+.settingSearch input:focus{
+    outline: none;
+}
+.settingSearch ul{
+    /* background-color: black; */
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+color: white;
+padding: 30px 40px;
+}
 
+.settingSearch ul li img{
+    height: 30px;
+}
+.settingSearch ul li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
 
 
