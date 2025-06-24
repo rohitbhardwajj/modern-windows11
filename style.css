@@ -15,7 +15,7 @@ html,body{
 .taskbar {
     height: 5%;
     width: 100%;
-    
+    z-index: 99999;
     position: absolute;
     bottom: 0%;
     background-color: rgba(49, 45, 45, 0.356);
@@ -156,6 +156,8 @@ html,body{
     flex-direction: column;
     position: relative;
     display: none;
+    
+    
 }
 .cameraTopBar{
     width: 100%;
@@ -399,6 +401,8 @@ h1{
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); 
     scale: 0;
+    z-index: 1;
+    position: absolute;
 }
 .settinglft{
     height: 100%;

@@ -90,7 +90,7 @@ let isCameraOn = true;
 openCameraBtn.addEventListener("click", async () => {
       reverseArrowmenuBar()
       if(isCameraOn){
-        camera.style.transform = "scale(1)";
+        // camera.style.transform = "scale(1)";
         camera.style.transition = "all 0.3s ease";
        camera.style.display = "flex";
        isCameraOn = false;
