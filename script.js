@@ -23,6 +23,8 @@ let batterybtn = document.querySelector(".batterybtn");
 let batteryDiv = document.querySelector(".batteryDiv");
 let fullSetting = document.querySelector(".fullSetting");
 let settingbtn = document.querySelector(".settingbtn");
+let w = document.querySelector(".w");
+
 
 let flag = true;
 
@@ -247,6 +249,7 @@ let date = new Date().toLocaleDateString('en-CA');
 let time = new Date().toLocaleTimeString('en-GB');
    datee.innerHTML = date;
    timee.innerHTML = time;
+   w.innerHTML = time;
 },1000)
 
 

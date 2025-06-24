@@ -475,6 +475,17 @@ padding: 30px 40px;
     cursor: pointer;
     background-color: gray;
 }
+.w{
+    color: white;
+    /* z-index: 99999; */
+    position: absolute;
+    left: 45%;
+    top: 5%;
+    font-size: 40px;
+    background: linear-gradient(to right ,red , rgb(46, 196, 245) ,green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 
 .fullSettingTop{
