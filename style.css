@@ -453,16 +453,28 @@ h1{
     flex-direction: column;
 color: white;
 padding: 30px 40px;
+
 }
 
 .settingSearch ul li img{
     height: 30px;
+  
 }
 .settingSearch ul li {
   display: flex;
   align-items: center;
   gap: 20px;
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   /* background-color: red; */
+   padding: 5px 8px;
+   border-radius: 10px;
 }
+.settingSearch ul li:hover{
+    cursor: pointer;
+    background-color: gray;
+}
+
 
 
 
