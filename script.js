@@ -21,6 +21,8 @@ let timee = document.querySelector(".timee");
 let datee = document.querySelector(".date");
 let batterybtn = document.querySelector(".batterybtn");
 let batteryDiv = document.querySelector(".batteryDiv");
+let fullSetting = document.querySelector(".fullSetting");
+let settingbtn = document.querySelector(".settingbtn");
 
 let flag = true;
 
@@ -247,3 +249,16 @@ let time = new Date().toLocaleTimeString('en-GB');
    timee.innerHTML = time;
 },1000)
 
+
+let isSettingDivOn = true;
+settingbtn.addEventListener("click" , ()=>{
+    if(isSettingDivOn){
+      fullSetting.style.scale = "1";
+      fullSetting.style.transition = "all 0.5s ease";
+      isSettingDivOn = false;
+    }else{
+           fullSetting.style.scale = "0";
+      fullSetting.style.transition = "all 0.3s ease";
+      isSettingDivOn= true;
+    }
+})
