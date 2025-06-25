@@ -24,6 +24,7 @@ let batteryDiv = document.querySelector(".batteryDiv");
 let fullSetting = document.querySelector(".fullSetting");
 let settingbtn = document.querySelector(".settingbtn");
 let w = document.querySelector(".w");
+let settingInputSearchBar = document.querySelector(".settingInputSearchBar");
 
 
 let flag = true;
@@ -265,3 +266,17 @@ settingbtn.addEventListener("click" , ()=>{
       isSettingDivOn= true;
     }
 })
+const listItems = document.querySelectorAll(".settingSearch ul li");
+
+  settingInputSearchBar.addEventListener("input", () => {
+    const searchTerm = settingInputSearchBar.value.toLowerCase(); // lowercase for case-insensitive match
+
+    listItems.forEach((li) => {
+      const text = li.querySelector("h5").textContent.toLowerCase();
+      if (text.includes(searchTerm)) {
+        li.style.display = "flex"; 
+      } else {
+        li.style.display = "none"; 
+      }
+    });
+  });
