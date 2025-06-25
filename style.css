@@ -291,17 +291,18 @@ h1{
 .MicrosoftStore{
     height: 100%;
     width: 100%;
-    background-color: rgb(0, 0, 0);
+   background-color: rgba(17, 13, 13, 0.868);
     position: absolute;
     display: flex;
 }
 .microsoftStoreLeft{
     height: 100%;
     width: 4%;
-            background-color: rgba(128, 128, 128, 0.4);
+          background-color: rgba(17, 13, 13, 0.868);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); 
    /* padding: 30px 20px; */
+   
 
 }
 .microsoftStoreLeft i{
@@ -319,20 +320,27 @@ h1{
 {
         height: 100%;
         width: 95%;
-        background-color: pink;
+           background-color: rgba(17, 13, 13, 0.868);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+     overflow-y: scroll;
        
 }
 .microsoftStoreSearchBar{
     width: 100%;
     height: 8%;
-    background-color: rgb(0, 0, 0);
+    background-color: black;  
     display: flex;
     justify-content: center;
     align-items: center;
+    position: sticky;
+    top: 0%;
+    right: 0%;
+    z-index: 9999;
 }
 .microsoftStoreSearchBar input{
     width: 60%;
-    height: 55%;
+    height: 65%;
     border-radius: 10px;
     background-color: transparent;
     border: 1px solid rgba(128, 128, 128, 0.543);
@@ -347,6 +355,64 @@ h1{
     height: 60%;
     background-color: purple;
 }
+
+.microSoftStoreEnd{
+    /* background-color: pink; */
+    width: 100%;
+    height: 90vh;
+    padding: 10px 15px;
+}
+.microSoftStoreEnd ul{
+    /* background-color: black; */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    height: 100%;
+    flex-shrink: 0;
+    justify-content: space-evenly;
+}
+
+.microSoftStoreEnd ul li{
+    border: 1px solid rgba(33, 32, 32, 0.63);
+    width: 20%;
+    height: 20%;
+    list-style: none;
+    background-color: rgba(56, 52, 52, 0.276);
+     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.microSoftStoreEnd ul li img{
+    height: 60px;
+    object-fit: cover;
+}
+.appDonwnload{
+    /* background-color: red; */
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   
+}
+.appDonwnload h3{
+     color: white;
+     font-size: 15px;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.appDonwnload button{
+     color: white;
+     padding: 10px 9px;
+     background-color: green;
+     border: none;
+     border-radius: 20px;
+    cursor: pointer;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.appDonwnload button:active{
+    scale: 0.8;
+}
+
   .swiper {
       width: 100%;
       height: 100%;
