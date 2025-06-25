@@ -269,7 +269,7 @@ settingbtn.addEventListener("click" , ()=>{
 const listItems = document.querySelectorAll(".settingSearch ul li");
 
   settingInputSearchBar.addEventListener("input", () => {
-    const searchTerm = settingInputSearchBar.value.toLowerCase(); // lowercase for case-insensitive match
+    const searchTerm = settingInputSearchBar.value.toLowerCase(); 
 
     listItems.forEach((li) => {
       const text = li.querySelector("h5").textContent.toLowerCase();
