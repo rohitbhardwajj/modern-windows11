@@ -383,8 +383,10 @@ h1{
     -webkit-backdrop-filter: blur(10px);
 }
 .microSoftStoreEnd ul li img{
-    height: 60px;
+    height: 40px;
     object-fit: cover;
+    /* background-color: red; */
+    margin: 5px 4px;
 }
 .appDonwnload{
     /* background-color: red; */
