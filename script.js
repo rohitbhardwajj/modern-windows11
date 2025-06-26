@@ -330,16 +330,20 @@ appDonwnload.forEach((e) => {
     if (isRunning) return;
     isRunning = true;
 
-    let i = 0;
+    let i = 1;
 
     let a = setInterval(() => {
       if (i <= 100) {
         i++;
         btn.innerHTML = i + "%";
+              gsap.to(".downloadbuttonOverlay", {
+  width: "100%",
+  duration: 4.7,
+});
       } else {
         clearInterval(a);
-
-        // ✅ App icon & name added to screen
+        alert(`${text.textContent} download succesfully ✅ `)
+      
         let data = `
           <div class="app1">
             <img src="${img}" alt="">
@@ -353,4 +357,5 @@ appDonwnload.forEach((e) => {
     }, 100);
   });
 });
+
 

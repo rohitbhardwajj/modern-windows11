@@ -414,17 +414,35 @@ h1{
      color: white;
      font-size: 15px;
      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     
 }
-.appDonwnload button{
-     color: white;
-     padding: 10px 9px;
-     background-color: green;
-     border: none;
-     min-width: 40%;
-     border-radius: 20px;
-    cursor: pointer;
-     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.appDonwnload button {
+  position: relative;
+  /* overflow: hidden; */
+  z-index: 1;
+  color: white;
+  padding: 10px 9px;
+  background-color: green;
+  border: none;
+  min-width: 40%;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Gill Sans', sans-serif;
 }
+
+.downloadbuttonOverlay {
+  background-color: rgba(255, 0, 0, 0.7); /* change to visible red */
+  height: 100%;
+  width: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; /* behind text */
+  transition: width 0.2s ease;
+  border-radius: 20px;
+  
+}
+
 .appDonwnload button:active{
     scale: 0.8;
 }
