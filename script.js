@@ -27,6 +27,10 @@ let w = document.querySelector(".w");
 let settingInputSearchBar = document.querySelector(".settingInputSearchBar");
 let MicrosoftStore = document.querySelector(".MicrosoftStore");
 let microsoftStoreBtn = document.querySelector(".microsoftStoreBtn");
+let appDonwnload = document.querySelectorAll(".appDonwnload");
+let Screen = document.querySelector(".allscreenApp");
+let storeLi = document.querySelectorAll(".microSoftStoreEnd ul li");
+
 
 
 
@@ -309,4 +313,44 @@ microsoftStoreBtn.addEventListener("click" , ()=>{
       ifStoreOpen= true;
     }
 })
+
+
+
+
+
+appDonwnload.forEach((e) => {
+  const text = e.querySelector("h3");
+  const btn = e.querySelector("button");
+  const parentLi = e.closest("li"); // 👈 Get parent <li>
+  const img = parentLi.querySelector("img").src; // 👈 Get image src from <li>
+
+  let isRunning = false;
+
+  btn.addEventListener("click", () => {
+    if (isRunning) return;
+    isRunning = true;
+
+    let i = 0;
+
+    let a = setInterval(() => {
+      if (i <= 100) {
+        i++;
+        btn.innerHTML = i + "%";
+      } else {
+        clearInterval(a);
+
+        // ✅ App icon & name added to screen
+        let data = `
+          <div class="app1">
+            <img src="${img}" alt="">
+            <p>${text.textContent}</p>
+          </div>`;
+
+        document.querySelector(".allscreenApp").innerHTML += data;
+        btn.innerHTML = "Downloaded";
+        btn.style.backgroundColor = "#2e5e2c";
+      }
+    }, 100);
+  });
+});
 
