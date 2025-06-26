@@ -294,6 +294,7 @@ h1{
    background-color: rgba(17, 13, 13, 0.868);
     position: absolute;
     display: flex;
+    scale: 0;
 }
 .microsoftStoreLeft{
     height: 100%;
@@ -324,7 +325,11 @@ h1{
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
      overflow-y: scroll;
+    
        
+}
+.microsoftStoreright::-webkit-scrollbar {
+  display: none;
 }
 .microsoftStoreSearchBar{
     width: 100%;

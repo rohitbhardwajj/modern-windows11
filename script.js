@@ -25,6 +25,9 @@ let fullSetting = document.querySelector(".fullSetting");
 let settingbtn = document.querySelector(".settingbtn");
 let w = document.querySelector(".w");
 let settingInputSearchBar = document.querySelector(".settingInputSearchBar");
+let MicrosoftStore = document.querySelector(".MicrosoftStore");
+let microsoftStoreBtn = document.querySelector(".microsoftStoreBtn");
+
 
 
 let flag = true;
@@ -293,4 +296,17 @@ var swiper = new Swiper(".mySwiper", {
   },
   loop: true 
 });
+
+let ifStoreOpen = true;
+microsoftStoreBtn.addEventListener("click" , ()=>{
+    if(ifStoreOpen){
+      MicrosoftStore.style.scale = "1";
+      MicrosoftStore.style.transition = "all 0.3s ease-in"
+      ifStoreOpen= false;
+    }else{
+           MicrosoftStore.style.scale = "0";
+      MicrosoftStore.style.transition = "all 0.3s ease-out"
+      ifStoreOpen= true;
+    }
+})
 
