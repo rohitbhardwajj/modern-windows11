@@ -31,13 +31,7 @@ let appDonwnload = document.querySelectorAll(".appDonwnload");
 let Screen = document.querySelector(".allscreenApp");
 let storeLi = document.querySelectorAll(".microSoftStoreEnd ul li");
 
-
-
-
 let flag = true;
-
-
-
 
 const tl = gsap.timeline({ paused: true });
 
@@ -45,67 +39,60 @@ tl.from(arrowSection, {
   y: "100%",
   opacity: 0,
   duration: 0.5,
-  ease: "power2.out"
+  ease: "power2.out",
 });
 
-let arrowMenu = ()=>{
-      if (flag) {
-    arrowSection.style.display = "block"; 
-    tl.play();                             // Play timeline (slide in)
+let arrowMenu = () => {
+  if (flag) {
+    arrowSection.style.display = "block";
+    tl.play(); // Play timeline (slide in)
     flag = false;
   } else {
-    tl.reverse();                          // Reverse timeline (slide out)
+    tl.reverse(); // Reverse timeline (slide out)
     tl.eventCallback("onReverseComplete", () => {
       arrowSection.style.display = "none"; // Fir display none
     });
     flag = true;
   }
-}
+};
 
-let reverseArrowmenuBar = ()=>{
-   tl.reverse();                          // Reverse timeline (slide out)
-    tl.eventCallback("onReverseComplete", () => {
-      arrowSection.style.display = "none"; // Fir display none
-    });
-    flag = true;
-}
-
-
-
-
+let reverseArrowmenuBar = () => {
+  tl.reverse(); // Reverse timeline (slide out)
+  tl.eventCallback("onReverseComplete", () => {
+    arrowSection.style.display = "none"; // Fir display none
+  });
+  flag = true;
+};
 
 arrow.addEventListener("click", () => {
   arrowMenu();
 });
 
-
-arrowSectionTopChild.forEach((val)=>{
-   let isOn = true;
-    val.addEventListener(("click"),()=>{
-        if(isOn){
-          val.style.backgroundColor = val.dataset.color;
-          isOn = false;
-        }else{
-           val.style.backgroundColor ="rgba(62, 57, 57, 0.564)" ;
-          isOn = true;
-        }
-    })
-})
-
+arrowSectionTopChild.forEach((val) => {
+  let isOn = true;
+  val.addEventListener("click", () => {
+    if (isOn) {
+      val.style.backgroundColor = val.dataset.color;
+      isOn = false;
+    } else {
+      val.style.backgroundColor = "rgba(62, 57, 57, 0.564)";
+      isOn = true;
+    }
+  });
+});
 
 let isCameraOn = true;
 
 openCameraBtn.addEventListener("click", async () => {
-      reverseArrowmenuBar()
-      if(isCameraOn){
-        // camera.style.transform = "scale(1)";
-        camera.style.transition = "all 0.3s ease";
-       camera.style.display = "flex";
-       isCameraOn = false;
-       
-  }else{
-     camera.style.display = "none";
-     isCameraOn= true;
+  reverseArrowmenuBar();
+  if (isCameraOn) {
+    // camera.style.transform = "scale(1)";
+    camera.style.transition = "all 0.3s ease";
+    camera.style.display = "flex";
+    isCameraOn = false;
+  } else {
+    camera.style.display = "none";
+    isCameraOn = true;
   }
   try {
     const stream = await navigator.mediaDevices.getUserMedia({ video: true });
@@ -117,7 +104,7 @@ openCameraBtn.addEventListener("click", async () => {
 });
 
 faminus.addEventListener("click", () => {
-  reverseArrowmenuBar()
+  reverseArrowmenuBar();
   camera.style.transform = "scale(0)";
   camera.style.transition = "all 0.3s ease";
   camera.style.position = "absolute";
@@ -125,61 +112,57 @@ faminus.addEventListener("click", () => {
   isMinimized = true;
   minimizeIconsCam.style.display = "initial";
 });
-minimizeIconsCam.addEventListener("click", ()=>{
-  reverseArrowmenuBar()
-   camera.style.transform = "scale(1)";
-     camera.style.display = "flex";
+minimizeIconsCam.addEventListener("click", () => {
+  reverseArrowmenuBar();
+  camera.style.transform = "scale(1)";
+  camera.style.display = "flex";
   camera.style.transition = "all 0.3s ease";
-})
-faxmark.addEventListener("click", ()=>{
-  reverseArrowmenuBar()
-   camera.style.transform = "scale(0)";
-    camera.style.transition = "all 0.3s ease";
-     minimizeIconsCam.style.display = "none";
-     openCameraBtn.style.backgroundColor = "rgba(62, 57, 57, 0.564)";
-      isCameraOn= true;
-})
-
+});
+faxmark.addEventListener("click", () => {
+  reverseArrowmenuBar();
+  camera.style.transform = "scale(0)";
+  camera.style.transition = "all 0.3s ease";
+  minimizeIconsCam.style.display = "none";
+  openCameraBtn.style.backgroundColor = "rgba(62, 57, 57, 0.564)";
+  isCameraOn = true;
+});
 
 let isExpand = true;
 
+faexpand.addEventListener("click", () => {
+  reverseArrowmenuBar();
 
-faexpand.addEventListener("click", ()=>{
-   
-reverseArrowmenuBar()
-
-  if(isExpand){
+  if (isExpand) {
     camera.style.height = "50%";
     camera.style.width = "50%";
-    cameraTopBarRht.style.width = "20%"
+    cameraTopBarRht.style.width = "20%";
     isExpand = false;
-  }else{
-    
+  } else {
     camera.style.height = "100%";
     camera.style.width = "100%";
-    cameraTopBarRht.style.width = "10%"
+    cameraTopBarRht.style.width = "10%";
     isExpand = true;
   }
-})
+});
 
-famoon.addEventListener("click" , ()=>{
-      overlay.style.opacity = "1";
-      overlay.style.display = "block";
+famoon.addEventListener("click", () => {
+  overlay.style.opacity = "1";
+  overlay.style.display = "block";
 
-       camera.style.transition = "all 0.3s ease";
-       camera.style.backgroundColor = "red";
-})
+  camera.style.transition = "all 0.3s ease";
+  camera.style.backgroundColor = "red";
+});
 
 let isBatterysaveon = true;
-battery.addEventListener("click",()=>{
-    if(isBatterysaveon){
+battery.addEventListener("click", () => {
+  if (isBatterysaveon) {
     confirm("Are you sure to Turn on Battery Saver");
     isBatterysaveon = false;
-    }else{
-          confirm("Are you sure to Turn off Battery Saver");
+  } else {
+    confirm("Are you sure to Turn off Battery Saver");
     isBatterysaveon = true;
-    }
-})
+  }
+});
 let isFlightmodeOn = true;
 let isWifiEnabled = true;
 
@@ -193,7 +176,6 @@ aeroplane.addEventListener("click", () => {
       isWifiEnabled = false;
       isFlightmodeOn = false;
     }
-
   } else {
     const ans = confirm("Are you sure to Turn OFF Flight Mode?");
     if (ans) {
@@ -206,7 +188,6 @@ aeroplane.addEventListener("click", () => {
   }
 });
 
-
 let isWindowOn = true;
 
 let w1 = gsap.timeline({ paused: true });
@@ -215,7 +196,7 @@ w1.from(windows, {
   y: "100%",
   opacity: 0,
   duration: 0.5,
-  ease: "power2.out"
+  ease: "power2.out",
 });
 
 windowbtn.addEventListener("click", () => {
@@ -223,9 +204,9 @@ windowbtn.addEventListener("click", () => {
     windows.style.display = "flex";
     w1.play();
   } else {
-    w1.reverse(); 
+    w1.reverse();
   }
-  isWindowOn = !isWindowOn; 
+  isWindowOn = !isWindowOn;
 });
 
 let b1 = gsap.timeline({ paused: true });
@@ -234,60 +215,53 @@ b1.from(batteryDiv, {
   y: "100%",
   opacity: 0,
   duration: 0.5,
-  ease: "power2.out"
+  ease: "power2.out",
 });
 
-batterybtn.addEventListener("click" , ()=>{
+batterybtn.addEventListener("click", () => {
   if (isBatteryDivOn) {
     batteryDiv.style.scale = "1";
     b1.play();
   } else {
-    b1.reverse(); 
+    b1.reverse();
   }
-  isBatteryDivOn = !isBatteryDivOn; 
-})
+  isBatteryDivOn = !isBatteryDivOn;
+});
 
-
-
-
-
-
-setInterval(()=>{
-let date = new Date().toLocaleDateString('en-CA');
-let time = new Date().toLocaleTimeString('en-GB');
-   datee.innerHTML = date;
-   timee.innerHTML = time;
-   w.innerHTML = time;
-},1000)
-
+setInterval(() => {
+  let date = new Date().toLocaleDateString("en-CA");
+  let time = new Date().toLocaleTimeString("en-GB");
+  datee.innerHTML = date;
+  timee.innerHTML = time;
+  w.innerHTML = time;
+}, 1000);
 
 let isSettingDivOn = true;
-settingbtn.addEventListener("click" , ()=>{
-    if(isSettingDivOn){
-      fullSetting.style.scale = "1";
-      fullSetting.style.transition = "all 0.5s ease";
-      isSettingDivOn = false;
-    }else{
-           fullSetting.style.scale = "0";
-      fullSetting.style.transition = "all 0.3s ease";
-      isSettingDivOn= true;
-    }
-})
+settingbtn.addEventListener("click", () => {
+  if (isSettingDivOn) {
+    fullSetting.style.scale = "1";
+    fullSetting.style.transition = "all 0.5s ease";
+    isSettingDivOn = false;
+  } else {
+    fullSetting.style.scale = "0";
+    fullSetting.style.transition = "all 0.3s ease";
+    isSettingDivOn = true;
+  }
+});
 const listItems = document.querySelectorAll(".settingSearch ul li");
 
-  settingInputSearchBar.addEventListener("input", () => {
-    const searchTerm = settingInputSearchBar.value.toLowerCase(); 
+settingInputSearchBar.addEventListener("input", () => {
+  const searchTerm = settingInputSearchBar.value.toLowerCase();
 
-    listItems.forEach((li) => {
-      const text = li.querySelector("h5").textContent.toLowerCase();
-      if (text.includes(searchTerm)) {
-        li.style.display = "flex"; 
-      } else {
-        li.style.display = "none"; 
-      }
-    });
+  listItems.forEach((li) => {
+    const text = li.querySelector("h5").textContent.toLowerCase();
+    if (text.includes(searchTerm)) {
+      li.style.display = "flex";
+    } else {
+      li.style.display = "none";
+    }
   });
-
+});
 
 var swiper = new Swiper(".mySwiper", {
   pagination: {
@@ -295,28 +269,24 @@ var swiper = new Swiper(".mySwiper", {
     dynamicBullets: true,
   },
   autoplay: {
-    delay: 3000, 
-    disableOnInteraction: false, 
+    delay: 3000,
+    disableOnInteraction: false,
   },
-  loop: true 
+  loop: true,
 });
 
 let ifStoreOpen = true;
-microsoftStoreBtn.addEventListener("click" , ()=>{
-    if(ifStoreOpen){
-      MicrosoftStore.style.scale = "1";
-      MicrosoftStore.style.transition = "all 0.3s ease-in"
-      ifStoreOpen= false;
-    }else{
-           MicrosoftStore.style.scale = "0";
-      MicrosoftStore.style.transition = "all 0.3s ease-out"
-      ifStoreOpen= true;
-    }
-})
-
-
-
-
+microsoftStoreBtn.addEventListener("click", () => {
+  if (ifStoreOpen) {
+    MicrosoftStore.style.scale = "1";
+    MicrosoftStore.style.transition = "all 0.3s ease-in";
+    ifStoreOpen = false;
+  } else {
+    MicrosoftStore.style.scale = "0";
+    MicrosoftStore.style.transition = "all 0.3s ease-out";
+    ifStoreOpen = true;
+  }
+});
 
 appDonwnload.forEach((e) => {
   const text = e.querySelector("h3");
@@ -333,17 +303,13 @@ appDonwnload.forEach((e) => {
     let i = 1;
 
     let a = setInterval(() => {
-      if (i <= 100) {
+      if (i < 100) {
         i++;
         btn.innerHTML = i + "%";
-              gsap.to(".downloadbuttonOverlay", {
-  width: "100%",
-  duration: 4.7,
-});
       } else {
         clearInterval(a);
-        alert(`${text.textContent} download succesfully ✅ `)
-      
+        alert(`${text.textContent} download succesfully ✅ `);
+
         let data = `
           <div class="app1">
             <img src="${img}" alt="">
@@ -354,8 +320,6 @@ appDonwnload.forEach((e) => {
         btn.innerHTML = "Downloaded";
         btn.style.backgroundColor = "#2e5e2c";
       }
-    }, 100);
+    }, 50);
   });
 });
-
-
