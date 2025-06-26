@@ -440,7 +440,7 @@ h1 {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
 }
 .app1 {
   height: 10%;
@@ -451,9 +451,7 @@ h1 {
   align-items: center;
   justify-content: space-between;
 }
-.app1:hover {
-  background-color: rgba(128, 128, 128, 0.39);
-}
+
 .app1 img {
   height: 50px;
 }

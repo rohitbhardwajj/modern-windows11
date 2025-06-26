@@ -288,18 +288,34 @@ microsoftStoreBtn.addEventListener("click", () => {
   }
 });
 
-appDonwnload.forEach((e) => {
+
+let allLinkArry = [
+  "https://www.instagram.com/?flo=true",
+  "https://web.whatsapp.com/",
+  "#",
+  "#",
+  "https://www.linkedin.com/home",
+  "#",
+  "https://chatgpt.com/?model=auto",
+  "https://chat.deepseek.com/",
+  "#",
+  "#",
+  "#",
+  "#"
+];
+
+appDonwnload.forEach((e, idx) => {
   const text = e.querySelector("h3");
   const btn = e.querySelector("button");
-  const parentLi = e.closest("li"); // 👈 Get parent <li>
-  const img = parentLi.querySelector("img").src; // 👈 Get image src from <li>
+  const parentLi = e.closest("li");
+  const img = parentLi.querySelector("img").src;
 
+  btn.setAttribute("id" , idx);
   let isRunning = false;
 
   btn.addEventListener("click", () => {
     if (isRunning) return;
     isRunning = true;
-
     let i = 1;
 
     let a = setInterval(() => {
@@ -308,11 +324,13 @@ appDonwnload.forEach((e) => {
         btn.innerHTML = i + "%";
       } else {
         clearInterval(a);
-        alert(`${text.textContent} download succesfully ✅ `);
+        alert(`${text.textContent} download successfully ✅`);
 
         let data = `
           <div class="app1">
-            <img src="${img}" alt="">
+            <a href="${allLinkArry[parseInt(btn.id)]}" target="_blank">
+              <img src="${img}" alt="">
+            </a>
             <p>${text.textContent}</p>
           </div>`;
 
@@ -323,3 +341,4 @@ appDonwnload.forEach((e) => {
     }, 50);
   });
 });
+
