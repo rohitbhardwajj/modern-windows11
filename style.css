@@ -186,11 +186,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* z-index: 9999; */
 }
 .cameraTopBarRht i {
   color: white;
   /* background-color: red; */
   padding: 10px;
+
   border-right: 1px solid rgba(128, 128, 128, 0.518);
 }
 .cameraTopBarRht i:hover {
