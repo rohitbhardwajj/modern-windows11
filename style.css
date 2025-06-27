@@ -302,28 +302,36 @@ h1 {
 .microsoftStoreLeft {
   height: 100%;
   width: 4%;
-  background-color: rgba(9, 5, 5, 0.868);
+ background-color: black;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   /* padding: 30px 20px; */
+  padding-top: 35px;
+  display: flex;
+  justify-content: center;
+}
+.MicrosoftTopBar img{
+  height: 20px;
 }
 .microsoftStoreLeft i {
   color: white;
-  background-color: gray;
+  background-color: rgba(146, 145, 145, 0.377);
   width: 80%;
-  height: 5%;
+  height: 7%;
   align-items: center;
   display: flex;
   justify-content: center;
-  margin: 5px 5px;
+  /* margin: 4px 0px; */
+  border-radius: 10px;
 }
 .microsoftStoreright {
   height: 100%;
-  width: 95%;
+  width: 100%;
   background-color: rgba(17, 13, 13, 0.868);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   overflow-y: scroll;
+  margin-top: 25px;
 }
 .microsoftStoreright::-webkit-scrollbar {
   display: none;
@@ -331,21 +339,25 @@ h1 {
 .microsoftStoreSearchBar {
   width: 100%;
   height: 8%;
-  background-color: rgba(9, 5, 5, 0.868);
+  
   display: flex;
+   background-color: black;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   position: sticky;
   top: 0%;
   right: 0%;
   z-index: 9999;
+
 }
 .microsoftStoreSearchBar input {
   width: 60%;
   height: 65%;
   border-radius: 10px;
   background-color: transparent;
-  border: 1px solid rgba(128, 128, 128, 0.543);
+  border: 1px solid rgba(128, 128, 128, 0.336);
   color: white;
   padding: 0px 15px;
 }
@@ -359,16 +371,57 @@ h1 {
 }
 
 .microSoftStoreEnd {
-  background-color: rgba(63, 60, 60, 0.377);
+  /* background-color: rgba(18, 16, 16, 0.906);
+  back */
+  background-color: rgb(24, 23, 23);
+  display: flex;
+    backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   width: 100%;
   height: 90vh;
   padding: 10px 15px;
+}
+.MicrosoftTopBar{
+  height: 4%;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+}
+.storeMinMaxCut{
+  height: 100%;
+  width: 7%;
+  background-color: rgb(248, 0, 41);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.storeMinMaxCut i{
+  background-color: black;
+  color: white;
+  height: 100%;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.storeMinMaxCut i:hover{
+  background-color: gray;
+}
+.storeMinMaxCut .cut:hover{
+  background-color: red;
 }
 .microSoftStoreEnd ul {
   /* background-color: black; */
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 30px;
   gap: 15px;
   height: 100%;
   flex-shrink: 0;
@@ -379,12 +432,14 @@ h1 {
   border: 1px solid rgba(59, 58, 58, 0.63);
   width: 20%;
   height: 20%;
+  border-radius: 10px;
   list-style: none;
-  background-color: rgba(56, 52, 52, 0.276);
+  background-color: black;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   padding: 5px 4px;
   box-shadow: 5px 5px 10px black;
+  
 }
 .microSoftStoreEnd ul li img {
   height: 40px;
