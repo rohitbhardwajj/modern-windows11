@@ -513,8 +513,6 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
-  /* cursor: move; */
 }
 
 .app1 img {
@@ -803,6 +801,7 @@ h1 {
   align-items: center;
   overflow: hidden;
   scale: 0;
+  z-index: 999999;
 }
 .calcMinMax{
    height: 30px;
@@ -841,7 +840,8 @@ h1 {
   background-color: gray;
   border: none;
   z-index: 9999;
-
+  transition: all 0.2s ease;
+  
 }
 .calcButtonsAll button:active{
   scale: 0.8;
@@ -864,7 +864,8 @@ h1 {
   height: 20%;
   width: 25%;
   text-align: center;
-   z-index: 9999999999999;
+   z-index: 99999999999;
+   
 
 }
 .calculator ul li button{
@@ -875,11 +876,14 @@ h1 {
   font-size: 20px;
   background-color: gray;
   border: none;
+  box-shadow: 10px 10px 20px rgb(116, 112, 112);
+  transition: all 0.2s ease;
+  
  
   /* margin-left: 3px; */
 }
 .calculator ul li button:active{
-  scale: 0.8;
+  scale: 0.8 !important;
 
 }
 

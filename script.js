@@ -33,6 +33,8 @@ let storeLi = document.querySelectorAll(".microSoftStoreEnd ul li");
 let loaderAnimation = document.querySelector(".loaderAnimation");
 let calcbtn = document.querySelector(".calcbtn");
 let calculator = document.querySelector(".calculator");
+let calculatorbuttons = document.querySelectorAll(".calculator ul li");
+let displayCalc = document.querySelector(".calculator input");
 
 let flag = true;
 
@@ -350,7 +352,7 @@ appDonwnload.forEach((e, idx) => {
         alert(`${text.textContent} download successfully ✅`);
 
         let data = `
-          <div class="app1">
+          <div class="app1" id = ${idx}>
             <a href="${allLinkArry[parseInt(btn.id)]}" target="_blank">
               <img src="${img}" alt="">
             </a>
@@ -379,23 +381,15 @@ calcbtn.addEventListener("click" , ()=>{
     }
 })
 
-const app = document.querySelector(".app1");
-let isDragging = false;
-let offsetX, offsetY;
 
-app.addEventListener("mousedown", (e) => {
-  isDragging = true;
-  offsetX = e.clientX - app.offsetLeft;
-  offsetY = e.clientY - app.offsetTop;
-});
+calculatorbuttons.forEach((e)=>{
+  let allCalButton =   e.querySelector("button");
+  // console.log(allCalButton.innerHTML)
+  allCalButton.addEventListener("click" , ()=>{
+    
+      displayCalc.value += allCalButton.innerHTML
+  })
 
-document.addEventListener("mousemove", (e) => {
-  if (isDragging) {
-    app.style.left = `${e.clientX - offsetX}px`;
-    app.style.top = `${e.clientY - offsetY}px`;
-  }
-});
+})
 
-document.addEventListener("mouseup", () => {
-  isDragging = false;
-});
+
