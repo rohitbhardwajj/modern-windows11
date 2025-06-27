@@ -379,3 +379,23 @@ calcbtn.addEventListener("click" , ()=>{
     }
 })
 
+const app = document.querySelector(".app1");
+let isDragging = false;
+let offsetX, offsetY;
+
+app.addEventListener("mousedown", (e) => {
+  isDragging = true;
+  offsetX = e.clientX - app.offsetLeft;
+  offsetY = e.clientY - app.offsetTop;
+});
+
+document.addEventListener("mousemove", (e) => {
+  if (isDragging) {
+    app.style.left = `${e.clientX - offsetX}px`;
+    app.style.top = `${e.clientY - offsetY}px`;
+  }
+});
+
+document.addEventListener("mouseup", () => {
+  isDragging = false;
+});

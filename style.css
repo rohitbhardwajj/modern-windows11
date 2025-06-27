@@ -513,6 +513,8 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  position: absolute;
+  /* cursor: move; */
 }
 
 .app1 img {
