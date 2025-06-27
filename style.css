@@ -800,6 +800,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  scale: 0;
 }
 .calcMinMax{
    height: 30px;

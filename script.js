@@ -31,6 +31,8 @@ let appDonwnload = document.querySelectorAll(".appDonwnload");
 let Screen = document.querySelector(".allscreenApp");
 let storeLi = document.querySelectorAll(".microSoftStoreEnd ul li");
 let loaderAnimation = document.querySelector(".loaderAnimation");
+let calcbtn = document.querySelector(".calcbtn");
+let calculator = document.querySelector(".calculator");
 
 let flag = true;
 
@@ -362,4 +364,18 @@ appDonwnload.forEach((e, idx) => {
     }, 50);
   });
 });
+
+
+let  calOpen = true;
+calcbtn.addEventListener("click" , ()=>{
+    if(calOpen){
+      calculator.style.scale = "1"
+      calculator.style.transition = "all 0.1s ease-in";
+      calOpen = false;
+    }else{
+        calculator.style.scale = "0"
+      calculator.style.transition = "all 0.3s ease-out";
+      calOpen = true;
+    }
+})
 
