@@ -347,6 +347,7 @@ appDonwnload.forEach((e, idx) => {
     let a = setInterval(() => {
       if (i < 100) {
         i++;
+        btn.style.backgroundColor = "red";
         btn.innerHTML = i + "%";
       } else {
         clearInterval(a);
@@ -362,7 +363,7 @@ appDonwnload.forEach((e, idx) => {
 
         document.querySelector(".allscreenApp").innerHTML += data;
         btn.innerHTML = "Downloaded";
-        btn.style.backgroundColor = "#2e5e2c";
+        btn.style.backgroundColor = "rgb(125, 162, 98)";
       }
     }, 50);
   });
