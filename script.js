@@ -382,14 +382,38 @@ calcbtn.addEventListener("click" , ()=>{
 })
 
 
-calculatorbuttons.forEach((e)=>{
-  let allCalButton =   e.querySelector("button");
-  // console.log(allCalButton.innerHTML)
-  allCalButton.addEventListener("click" , ()=>{
-    if(displayCalc.value==0) displayCalc.value = " ";
-      displayCalc.value += allCalButton.innerHTML
-  })
+calculatorbuttons.forEach((e) => {
+  let allCalButton = e.querySelector("button");
 
-})
+  allCalButton.addEventListener("click", () => {
+    const value = allCalButton.innerHTML;
+
+    
+    if (value === "C") {
+      displayCalc.value = "";
+      return;
+    }
+
+    
+    if (value === "DEL") {
+      displayCalc.value = displayCalc.value.slice(0, -1);
+      return;
+    }
+
+    
+    if (value === "=") {
+      try {
+        displayCalc.value = eval(displayCalc.value);
+      } catch {
+        displayCalc.value = "Error";
+      }
+      return;
+    }
+
+    if (displayCalc.value == 0) displayCalc.value = "";
+    displayCalc.value += value;
+  });
+});
+
 
 
