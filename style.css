@@ -916,6 +916,79 @@ h1 {
 .orange{
    background-color: rgb(255, 178, 35) !important;
 }
+
+
+.rghtClick{
+  height: 30%;
+  width: 12%;
+  background-color: white;
+  position: absolute;
+  z-index: 999999999;
+  scale: 0;
+  border: 1px solid gray;
+}
+.rghtClick ul{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+}
+.rghtClick ul li{
+  /* background-color: red; */
+  border-bottom: 1px solid gray;
+  width: 90%;
+  padding: 0px 10px;
+  color: rgb(0, 0, 0);
+  height: 23.8px;
+  list-style: none;
+}
+.rghtClick ul li:hover{
+  background-color: rgba(128, 128, 128, 0.34);
+  cursor: pointer;
+}
+
+
+.wallpaperMenu{
+  height: 40%;
+  width: 60%;
+  position: absolute;
+  background-color: black;
+  z-index: 9999999;
+  top: 20%;
+  left: 10%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.wallpaperMenuCut{
+  height: 10%;
+  width: 100%;
+  background-color: black;
+  /* border-radius: 20px; */
+}
+.wallpaperMenu h2{
+  /* z-index: 999999900999; */
+  color: white;
+  font-size: 30px;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
 /* @media (max-width:600px) {
    *{
     display: none;

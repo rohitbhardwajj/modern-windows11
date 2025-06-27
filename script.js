@@ -424,6 +424,26 @@ cutCalcbtn.addEventListener("click" , ()=>{
 })
 
 
+let rghtClick = document.querySelector(".rghtClick");
+
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault(); // Right click menu disable
+
+  rghtClick.style.top = e.clientY + "px";
+  rghtClick.style.left = e.clientX + "px";
+  rghtClick.style.scale = 1;
+  rghtClick.style.transition = "all 0.3s ease-in";
+});
+
+
+// let wallaperBtn = document.querySelector(".wallaperBtn");
+// wallaperBtn.addEventListener("click" , ()=>{
+
+
+// })
+
+
+
 
 
 
