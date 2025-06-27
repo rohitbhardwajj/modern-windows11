@@ -30,6 +30,7 @@ let microsoftStoreBtn = document.querySelector(".microsoftStoreBtn");
 let appDonwnload = document.querySelectorAll(".appDonwnload");
 let Screen = document.querySelector(".allscreenApp");
 let storeLi = document.querySelectorAll(".microSoftStoreEnd ul li");
+let loaderAnimation = document.querySelector(".loaderAnimation");
 
 let flag = true;
 
@@ -275,18 +276,38 @@ var swiper = new Swiper(".mySwiper", {
   loop: true,
 });
 
+
+
+
 let ifStoreOpen = true;
+
 microsoftStoreBtn.addEventListener("click", () => {
+  // ✅ Agar store open hona hai, tab loader dikhana hai
   if (ifStoreOpen) {
-    MicrosoftStore.style.scale = "1";
-    MicrosoftStore.style.transition = "all 0.3s ease-in";
-    ifStoreOpen = false;
+    let i = 1;
+    loaderAnimation.style.display = "flex"; // Show loader
+
+    let discard = setInterval(() => {
+      if (i < 100) {
+        i++;
+        console.log(i);
+      } else {
+        clearInterval(discard);
+        loaderAnimation.style.display = "none"; // Hide loader
+
+        MicrosoftStore.style.scale = "1";
+        MicrosoftStore.style.transition = "all 0.3s ease-in";
+        ifStoreOpen = false;
+      }
+    }, 10);
   } else {
+    // ❌ No loader needed on closing
     MicrosoftStore.style.scale = "0";
     MicrosoftStore.style.transition = "all 0.3s ease-out";
     ifStoreOpen = true;
   }
 });
+
 
 
 let allLinkArry = [

@@ -21,7 +21,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    
+
     <link rel="stylesheet" href="style.css" />
     <link
       rel="shortcut icon"
@@ -30,17 +30,28 @@
     />
   </head>
   <body>
+    <div class="loaderAnimation">
+      <dotlottie-player
+        src="https://lottie.host/ca2a08c4-988a-4f97-985a-f532ce669a25/sSpsx4hKk3.lottie"
+        background="transparent"
+        speed="1"
+        style="width: 150px; height: 150px"
+        loop
+        autoplay
+      ></dotlottie-player>
+      <h2>Loading Please Wait...</h2>
+    </div>
     <h2 class="w">Loading...</h2>
     <div class="allscreenApp"></div>
     <div class="MicrosoftStore">
-       <div class="MicrosoftTopBar">
-        <img src="./assets/store.png" alt="">
-          <div class="storeMinMaxCut">
-            <i class="fa-solid fa-minus"></i>
+      <div class="MicrosoftTopBar">
+        <img src="./assets/store.png" alt="" />
+        <div class="storeMinMaxCut">
+          <i class="fa-solid fa-minus"></i>
           <i class="fa-solid fa-expand"></i>
           <i class="fa-solid fa-xmark cut"></i>
-          </div>
-       </div>
+        </div>
+      </div>
       <div class="microsoftStoreLeft">
         <i class="fa-solid fa-house"></i>
       </div>
@@ -424,6 +435,10 @@
       </div>
     </div>
 
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
   </body>

@@ -766,6 +766,24 @@ h1 {
   background-color: gray;
 }
 
+
+.loaderAnimation{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  z-index: 999999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+.loaderAnimation h2{
+  color: white;
+  z-index: 99999999999;
+}
+
 /* @media (max-width:600px) {
    *{
     display: none;
