@@ -35,6 +35,7 @@ let calcbtn = document.querySelector(".calcbtn");
 let calculator = document.querySelector(".calculator");
 let calculatorbuttons = document.querySelectorAll(".calculator ul li");
 let displayCalc = document.querySelector(".calculator input");
+let cutCalcbtn = document.querySelector(".calcMinMax i");
 
 let flag = true;
 
@@ -414,6 +415,14 @@ calculatorbuttons.forEach((e) => {
     displayCalc.value += value;
   });
 });
+
+cutCalcbtn.addEventListener("click" , ()=>{
+       calculator.style.scale = "0"
+      calculator.style.transition = "all 0.3s ease-out";
+      calOpen = true;
+})
+
+
 
 
 

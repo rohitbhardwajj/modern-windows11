@@ -807,6 +807,22 @@ h1 {
    height: 30px;
    width: 100%;
    /* background-color: red */
+   text-align: end;
+   padding: 1px 3px;
+   
+}
+.calcMinMax i{
+  color: white;
+  background-color: red;
+  height: 100%;
+  width: 10%;
+  text-align: center;
+  border-radius: 10px;
+  padding-top: 4px;
+  margin-top: 2px;
+}
+.calcMinMax i:hover{
+  background-color: tomato;
 }
 .calculator input{
      width: 90%;
@@ -848,7 +864,7 @@ h1 {
 }
 .calculator ul{
   /* background-color: pink; */
-  height: 60%;
+  height: 75%;
   width: 85%;
   display: flex;
   flex-wrap: wrap;
@@ -877,7 +893,7 @@ h1 {
   font-size: 20px;
   background-color: gray;
   border: none;
-  box-shadow: 10px 10px 20px rgb(116, 112, 112);
+  /* box-shadow: 10px 10px 20px rgb(116, 112, 112); */
   transition: all 0.2s ease;
   
  
