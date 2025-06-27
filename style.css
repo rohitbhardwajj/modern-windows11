@@ -358,6 +358,7 @@ h1 {
   border-radius: 10px;
   background-color: transparent;
   border: 1px solid rgba(128, 128, 128, 0.336);
+   background-color: rgb(24, 23, 23);
   color: white;
   padding: 0px 15px;
 }
