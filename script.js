@@ -386,7 +386,7 @@ calculatorbuttons.forEach((e)=>{
   let allCalButton =   e.querySelector("button");
   // console.log(allCalButton.innerHTML)
   allCalButton.addEventListener("click" , ()=>{
-    
+    if(displayCalc.value==0) displayCalc.value = " ";
       displayCalc.value += allCalButton.innerHTML
   })
 
