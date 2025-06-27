@@ -428,6 +428,15 @@ h1 {
   flex-shrink: 0;
   justify-content: space-evenly;
 }
+.MicrosoftDownloadOverlay{
+  height: 30%;
+  width: 80%;
+  background-color: rgba(244, 2, 2, 0.317);
+  position: absolute;
+  z-index: 999999;
+  border-radius: 10px;
+}
+.appDonwnload appDonwnload
 
 .microSoftStoreEnd ul li {
   border: 1px solid rgba(59, 58, 58, 0.63);
@@ -455,6 +464,7 @@ h1 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  position: relative;
 }
 .appDonwnload h3 {
   color: white;
