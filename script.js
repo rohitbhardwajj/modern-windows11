@@ -368,7 +368,7 @@ let calOpen = true;
 calcbtn.addEventListener("click", () => {
   if (calOpen) {
     calculator.style.scale = "1";
-    calculator.style.transition = "all 0.1s ease-in";
+    calculator.style.transition = "all 0.3s ease-in";
     calOpen = false;
   } else {
     calculator.style.scale = "0";
@@ -468,10 +468,12 @@ SetWallpaper.addEventListener("click", () => {
   }, 30);
 });
 
-let wallpaperMenuCut = document.querySelector(".wallpaperMenuCut fa-xmark")
+let wallpaperMenuCut = document.querySelector(".wallpaperMenuCut .fa-xmark")
 
 wallpaperMenuCut.addEventListener("click" , ()=>{
-  
+        wallpaperMenu.style.scale = 0;
+    wallpaperMenu.style.transition = "all 0.3s ease-out";
+    wallpaperMenuOpen = true;
 })
 
 // https://wallpapercat.com/w/full/8/e/7/607651-3840x2160-desktop-4k-sports-car-background-image.jpg

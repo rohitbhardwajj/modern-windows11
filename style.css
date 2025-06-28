@@ -795,9 +795,10 @@ h1 {
 .calculator{
   height: 70%;
   width: 25%;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.329);
   border-radius: 10px;
   position: absolute;
+  backdrop-filter: blur(10px);
   top: 10%;
   left: 10%;
   display: flex;
@@ -909,7 +910,7 @@ h1 {
 }
 
 .equal{
-  background-color: rgb(255, 178, 35) !important;
+  background-color: rgb(255, 98, 0) !important;
   width: 170% !important;
   border-radius: none !important;
   margin-left: 10px;
@@ -918,7 +919,9 @@ h1 {
   
 }
 .orange{
-   background-color: rgb(255, 178, 35) !important;
+   background-color: rgb(255, 98, 0)!important;
+   font-size: 10px;
+   font-weight: 600;
 }
 
 
@@ -961,7 +964,8 @@ h1 {
   position: absolute;
   /* background-color: rgba(0, 0, 0, 0.653);
   bac */
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.511);
+  backdrop-filter: blur(10px);
   z-index: 9999999;
   /* backdrop-filter: blur(10px); */
   top: 20%;
@@ -986,7 +990,7 @@ h1 {
   margin-top: 10px;
   border-radius: 20px;
   border: none;
-  height: 40%;
+  height: 55%;
   background-color: transparent;
   color: white;
   border: 1px solid rgba(128, 128, 128, 0.361);
@@ -1000,14 +1004,16 @@ h1 {
 
 }
 .wallpaperMenu button{
-  padding: 10px 5px;
+  padding: 12px 8px;
+  font-size: 15px;
   border-radius: 10px;
   cursor: pointer;
   color: white;
-  background-color: green;
+  background-color: rgb(245, 2, 2);
   border: none;
+  font-weight: 600;
   box-shadow: 5px 5px 100px white;
-  margin-top: 10px;
+  margin-top: 25px;
 }
 .wallpaperMenu button:active{
   scale: 0.8;
@@ -1016,7 +1022,8 @@ h1 {
 .wallpaperMenuCut{
   height: 10%;
   width: 100%;
-  background-color: rgb(0, 0, 0);
+background-color: rgba(19, 13, 13, 0.402);
+  backdrop-filter: blur(10px);
   /* border-radius: 20px; */
   display: flex;
   justify-content: flex-end;
@@ -1037,14 +1044,15 @@ h1 {
 .wallpaperMenuCut i:hover{
   background-color: tomato;
 }
-.wallpaperMenu h2{
-  /* z-index: 999999900999; */
-  color: white;
+.wallpaperMenu h2 {
+  background: linear-gradient(to right, red,  rgb(27, 205, 218) , rgb(198, 81, 81) );
+  -webkit-background-clip: text;
+  color: transparent; /* 🔴 important line */
   font-size: 30px;
   margin-top: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- 
 }
+
 
 
 
