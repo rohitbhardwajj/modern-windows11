@@ -436,11 +436,23 @@ document.addEventListener("contextmenu", function (e) {
 });
 
 
-// let wallaperBtn = document.querySelector(".wallaperBtn");
-// wallaperBtn.addEventListener("click" , ()=>{
+let wallpaperMenuOpen = true;
+let wallaperBtn = document.querySelector(".wallaperBtn");
+let wallpaperMenu = document.querySelector(".wallpaperMenu");
+wallaperBtn.addEventListener("click" , ()=>{
+
+  if(wallpaperMenuOpen){
+  wallpaperMenu.style.scale = 1;
+  wallpaperMenu.style.transition = "all 0.3s ease-in";
+  wallpaperMenuOpen = false;
+}else{
+   wallpaperMenu.style.scale = 0;
+  wallpaperMenu.style.transition = "all 0.3s ease-out";
+  wallpaperMenuOpen = true;
+}
 
 
-// })
+})
 
 
 

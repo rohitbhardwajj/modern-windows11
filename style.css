@@ -952,11 +952,14 @@ h1 {
 
 
 .wallpaperMenu{
-  height: 40%;
-  width: 60%;
+  height: 50%;
+  width: 40%;
   position: absolute;
+  /* background-color: rgba(0, 0, 0, 0.653);
+  bac */
   background-color: black;
   z-index: 9999999;
+  /* backdrop-filter: blur(10px); */
   top: 20%;
   left: 10%;
   border-radius: 20px;
@@ -964,18 +967,78 @@ h1 {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  color: white;
+  /* scale: 0; */
+}
+.Url{
+  width: 100%;
+  height: 30%;
+  /* background-color: red; */
+  margin-top: 20px;
+  padding: 10px 20px;
+}
+.Url input{
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 20px;
+  border: none;
+  height: 40%;
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgba(128, 128, 128, 0.361);
+  padding: 0px 20px;
+}
+.Url input:focus{
+  outline: none;
+}
+.Url h3{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.wallpaperMenu button{
+  padding: 10px 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  background-color: green;
+  border: none;
+  box-shadow: 5px 5px 100px white;
+  margin-top: 10px;
+}
+.wallpaperMenu button:active{
+  scale: 0.8;
 }
 
 .wallpaperMenuCut{
   height: 10%;
   width: 100%;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   /* border-radius: 20px; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+.wallpaperMenuCut i{
+  color: white;
+  background-color: red;
+  height: 80%;
+  padding: 0px 10px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  align-items: center;
+  margin-right: 8px;
+}
+.wallpaperMenuCut i:hover{
+  background-color: tomato;
 }
 .wallpaperMenu h2{
   /* z-index: 999999900999; */
   color: white;
   font-size: 30px;
+  margin-top: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  
 }
 
