@@ -281,9 +281,6 @@ var swiper = new Swiper(".mySwiper", {
   loop: true,
 });
 
-
-
-
 let ifStoreOpen = true;
 
 microsoftStoreBtn.addEventListener("click", () => {
@@ -313,8 +310,6 @@ microsoftStoreBtn.addEventListener("click", () => {
   }
 });
 
-
-
 let allLinkArry = [
   "https://www.instagram.com/?flo=true",
   "https://web.whatsapp.com/",
@@ -327,7 +322,7 @@ let allLinkArry = [
   "#",
   "#",
   "#",
-  "#"
+  "#",
 ];
 
 appDonwnload.forEach((e, idx) => {
@@ -336,7 +331,7 @@ appDonwnload.forEach((e, idx) => {
   const parentLi = e.closest("li");
   const img = parentLi.querySelector("img").src;
 
-  btn.setAttribute("id" , idx);
+  btn.setAttribute("id", idx);
   let isRunning = false;
 
   btn.addEventListener("click", () => {
@@ -369,20 +364,18 @@ appDonwnload.forEach((e, idx) => {
   });
 });
 
-
-let  calOpen = true;
-calcbtn.addEventListener("click" , ()=>{
-    if(calOpen){
-      calculator.style.scale = "1"
-      calculator.style.transition = "all 0.1s ease-in";
-      calOpen = false;
-    }else{
-        calculator.style.scale = "0"
-      calculator.style.transition = "all 0.3s ease-out";
-      calOpen = true;
-    }
-})
-
+let calOpen = true;
+calcbtn.addEventListener("click", () => {
+  if (calOpen) {
+    calculator.style.scale = "1";
+    calculator.style.transition = "all 0.1s ease-in";
+    calOpen = false;
+  } else {
+    calculator.style.scale = "0";
+    calculator.style.transition = "all 0.3s ease-out";
+    calOpen = true;
+  }
+});
 
 calculatorbuttons.forEach((e) => {
   let allCalButton = e.querySelector("button");
@@ -390,19 +383,16 @@ calculatorbuttons.forEach((e) => {
   allCalButton.addEventListener("click", () => {
     const value = allCalButton.innerHTML;
 
-    
     if (value === "C") {
       displayCalc.value = "";
       return;
     }
 
-    
     if (value === "DEL") {
       displayCalc.value = displayCalc.value.slice(0, -1);
       return;
     }
 
-    
     if (value === "=") {
       try {
         displayCalc.value = eval(displayCalc.value);
@@ -417,12 +407,11 @@ calculatorbuttons.forEach((e) => {
   });
 });
 
-cutCalcbtn.addEventListener("click" , ()=>{
-       calculator.style.scale = "0"
-      calculator.style.transition = "all 0.3s ease-out";
-      calOpen = true;
-})
-
+cutCalcbtn.addEventListener("click", () => {
+  calculator.style.scale = "0";
+  calculator.style.transition = "all 0.3s ease-out";
+  calOpen = true;
+});
 
 let rghtClick = document.querySelector(".rghtClick");
 
@@ -435,27 +424,48 @@ document.addEventListener("contextmenu", function (e) {
   rghtClick.style.transition = "all 0.3s ease-in";
 });
 
-
 let wallpaperMenuOpen = true;
 let wallaperBtn = document.querySelector(".wallaperBtn");
 let wallpaperMenu = document.querySelector(".wallpaperMenu");
-wallaperBtn.addEventListener("click" , ()=>{
 
-  if(wallpaperMenuOpen){
-  wallpaperMenu.style.scale = 1;
-  wallpaperMenu.style.transition = "all 0.3s ease-in";
-  wallpaperMenuOpen = false;
-}else{
-   wallpaperMenu.style.scale = 0;
-  wallpaperMenu.style.transition = "all 0.3s ease-out";
-  wallpaperMenuOpen = true;
-}
+wallaperBtn.addEventListener("click", () => {
+  if (wallpaperMenuOpen) {
+    wallpaperMenu.style.scale = 1;
+    wallpaperMenu.style.transition = "all 0.3s ease-in";
+    wallpaperMenuOpen = false;
+  } else {
+    wallpaperMenu.style.scale = 0;
+    wallpaperMenu.style.transition = "all 0.3s ease-out";
+    wallpaperMenuOpen = true;
+  }
+});
+let SetWallpaper = document.querySelector(".SetWallpaper");
+let ImageUrl = document.querySelector(".ImageUrl");
+let body = document.body;
 
+SetWallpaper.addEventListener("click", () => {
+  let setUrl = ImageUrl.value.trim();
+  if (!setUrl) {
+    alert("Please enter a valid image URL");
+    return;
+  }
 
-})
+  let i = 1;
+  loaderAnimation.style.display = "flex";
 
+  let wallpIntervalCut = setInterval(() => {
+    if (i < 100) {
+      i++;
+    } else {
+      clearInterval(wallpIntervalCut);
+      loaderAnimation.style.display = "none";
+      body.style.backgroundImage = `url('${setUrl}')`;
+      alert("Wallpaper Set Succesfully ✅ ✅ ✅ ");
+      wallpaperMenu.style.scale = 0;
+      wallpaperMenu.style.transition = "all 0.3s ease-out";
+      wallpaperMenuOpen = true;
+    }
+  }, 30);
+});
 
-
-
-
-
+// https://wallpapercat.com/w/full/8/e/7/607651-3840x2160-desktop-4k-sports-car-background-image.jpg
