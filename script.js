@@ -468,4 +468,10 @@ SetWallpaper.addEventListener("click", () => {
   }, 30);
 });
 
+let wallpaperMenuCut = document.querySelector(".wallpaperMenuCut fa-xmark")
+
+wallpaperMenuCut.addEventListener("click" , ()=>{
+  
+})
+
 // https://wallpapercat.com/w/full/8/e/7/607651-3840x2160-desktop-4k-sports-car-background-image.jpg
