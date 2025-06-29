@@ -542,6 +542,14 @@ storeCut.addEventListener("click" , ()=>{
   bgColorStoreMin = false;
 })
 
+let LoginBtn = document.querySelector(".LoginBtn");
+let LoginName = document.querySelector(".LoginName");
+let LoginVideo = document.querySelector(".Login");
+
+LoginBtn.addEventListener("click" , ()=>{
+     LoginName.style.display = "none";
+     LoginVideo.style.display = "flex";
+})
 
 
 // https://wallpapercat.com/w/full/8/e/7/607651-3840x2160-desktop-4k-sports-car-background-image.jpg

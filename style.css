@@ -1070,6 +1070,83 @@ background-color: rgba(19, 13, 13, 0.402);
 }
 
 
+.Login{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  z-index: 99999999999999999;display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.LoginForm{
+  /* background-color: red; */
+  /* border: 1px solid rgb(255, 255, 255);
+   */
+   box-shadow: 1px 2px 510px red;
+  border-radius: 35px;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  /* justify-content: center; */
+  background-color: rgba(138, 60, 60, 0.025);
+  backdrop-filter: blur(10px);
+  padding-top: 30px;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+ 
+}
+.LoginForm:hover{
+  scale: 1.1;
+}
+.LoginName{
+  height: 100%;
+  width: 100%;
+  /* background-color: rgb(255, 0, 0); */
+  position: absolute;
+  z-index: 99999999999999999;display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 70px; */
+  background-image: url("https://wallpapers.com/images/hd/hacking-background-7tsozg1q4mxg4s42.jpg");
+  object-fit: contain;
+   /* display: none; */
+}
+.LoginName img{
+  height: 70px;
+}
+.LoginName input{
+  height: 12%;
+  width: 90%;
+  border-radius: 20px;
+  background-color: transparent;
+  color: white;
+  padding: 0px 10px;
+  border: 1px solid rgba(128, 128, 128, 0.249);
+  margin-top: 70px;
+}
+.LoginName input:active{
+  outline: none;
+  
+}
+.LoginName button{
+  margin-top: 30px;
+  padding: 13px 17px;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #04537C;
+  border: none;
+  color: white;
+}
+.LoginName button:active{
+  scale: 0.9;
+}
+
+
 
 
 
