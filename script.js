@@ -287,7 +287,15 @@ microsoftStoreBtn.addEventListener("click", () => {
   // ✅ Agar store open hona hai, tab loader dikhana hai
   if (ifStoreOpen) {
     let i = 1;
-    loaderAnimation.style.display = "flex"; // Show loader
+    if(bgColorStoreMin){
+          MicrosoftStore.style.scale = "1";
+         microsoftStoreBtn.style.backgroundColor = "transparent";
+        MicrosoftStore.style.transition = "all 0.3s ease-in";
+        ifStoreOpen = false;
+    }else{
+      loaderAnimation.style.display = "flex"; 
+    }
+    
 
     let discard = setInterval(() => {
       if (i < 100) {
@@ -298,6 +306,7 @@ microsoftStoreBtn.addEventListener("click", () => {
         loaderAnimation.style.display = "none"; // Hide loader
 
         MicrosoftStore.style.scale = "1";
+         microsoftStoreBtn.style.backgroundColor = "transparent";
         MicrosoftStore.style.transition = "all 0.3s ease-in";
         ifStoreOpen = false;
       }
@@ -309,6 +318,7 @@ microsoftStoreBtn.addEventListener("click", () => {
     ifStoreOpen = true;
   }
 });
+
 
 let allLinkArry = [
   "https://www.instagram.com/?flo=true",
@@ -497,5 +507,41 @@ cameraBtn.addEventListener("click" , async ()=>{
     alert("Camera access allow karo");
   }
 })
+
+
+let storeMin = document.querySelector(".storeMinMaxCut .fa-minus");
+let storeMax = document.querySelector(".storeMinMaxCut .fa-expand");
+let storeCut= document.querySelector(".storeMinMaxCut .fa-xmark");
+
+let bgColorStoreMin = false;
+storeMin.addEventListener("click" , ()=>{
+    MicrosoftStore.style.scale = "0";
+    ifStoreOpen = true;
+    bgColorStoreMin = true;
+    microsoftStoreBtn.style.backgroundColor = "rgba(223, 86, 36, 0.566)";
+
+})
+
+let isStoreMax = true;
+storeMax.addEventListener("click" , ()=>{
+
+  if(isStoreMax){
+    MicrosoftStore.style.width = "50%";
+    MicrosoftStore.style.height = "50%";
+     isStoreMax = false;
+  }else{
+    MicrosoftStore.style.width = "100%";
+    MicrosoftStore.style.height = "100%";
+    isStoreMax = true;
+  }
+})
+storeCut.addEventListener("click" , ()=>{
+    MicrosoftStore.style.scale = "0";
+    MicrosoftStore.style.transition = "all 0.3s ease-out";
+    ifStoreOpen = true;
+  bgColorStoreMin = false;
+})
+
+
 
 // https://wallpapercat.com/w/full/8/e/7/607651-3840x2160-desktop-4k-sports-car-background-image.jpg
