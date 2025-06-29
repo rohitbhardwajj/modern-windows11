@@ -8,10 +8,16 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background-image: url("https://wallpapercat.com/w/full/8/e/7/607651-3840x2160-desktop-4k-sports-car-background-image.jpg");
-  overflow: hidden;
+  /* background-image: url("https://wallpapercat.com/w/full/8/e/7/607651-3840x2160-desktop-4k-sports-car-background-image.jpg");
+  overflow: hidden; */
   background-size: cover;
   background-position: center;
+  overflow-y: hidden;
+}
+.img{
+  width: 100%;
+  z-index: -1;
+  position: absolute;
 }
 .taskbar {
   height: 5%;
@@ -1079,6 +1085,9 @@ background-color: rgba(19, 13, 13, 0.402);
   justify-content: center;
   align-items: center;
   display: none;
+}
+.Login video{
+  width: 100%;
 }
 .LoginForm{
   /* background-color: red; */
