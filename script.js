@@ -542,14 +542,35 @@ storeCut.addEventListener("click" , ()=>{
   bgColorStoreMin = false;
 })
 
+
+
 let LoginBtn = document.querySelector(".LoginBtn");
 let LoginName = document.querySelector(".LoginName");
 let LoginVideo = document.querySelector(".Login");
+let Loginvdo = document.querySelector(".Login video");
+let LogInput = document.querySelector(".LoginName input");
 
-LoginBtn.addEventListener("click" , ()=>{
-     LoginName.style.display = "none";
-     LoginVideo.style.display = "flex";
-})
+LoginBtn.addEventListener("click", () => {
+  if (LogInput.value.trim() !== "") {
+    LoginName.style.display = "none";
+    LoginVideo.style.display = "flex";
+    Loginvdo.play();
+
+   
+    Loginvdo.addEventListener("ended", () => {
+      LoginVideo.style.transition = "all 0.3s ease-out";
+      LoginVideo.style.display = "none";
+    });
+
+  } else {
+    alert("Abe Jab Kehra hu Name Enter kar 😡😡😡😡");
+  }
+});
+
+
+ 
+
+
 
 
 // https://wallpapercat.com/w/full/8/e/7/607651-3840x2160-desktop-4k-sports-car-background-image.jpg
