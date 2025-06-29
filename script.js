@@ -549,6 +549,9 @@ let LoginName = document.querySelector(".LoginName");
 let LoginVideo = document.querySelector(".Login");
 let Loginvdo = document.querySelector(".Login video");
 let LogInput = document.querySelector(".LoginName input");
+let CarVideoWallpaper = document.querySelector(".img");
+
+
 
 LoginBtn.addEventListener("click", () => {
   if (LogInput.value.trim() !== "") {
@@ -556,10 +559,14 @@ LoginBtn.addEventListener("click", () => {
     LoginVideo.style.display = "flex";
     Loginvdo.play();
 
+
    
     Loginvdo.addEventListener("ended", () => {
       LoginVideo.style.transition = "all 0.3s ease-out";
       LoginVideo.style.display = "none";
+      CarVideoWallpaper.play();
+      CarVideoWallpaper.muted = true;
+      CarVideoWallpaper.loop = true;
     });
 
   } else {
