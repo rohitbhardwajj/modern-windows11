@@ -476,4 +476,26 @@ wallpaperMenuCut.addEventListener("click" , ()=>{
     wallpaperMenuOpen = true;
 })
 
+
+let cameraBtn = document.querySelector(".cameraBtn");
+
+cameraBtn.addEventListener("click" , async ()=>{
+  if (isCameraOn) {
+    // camera.style.transform = "scale(1)";
+    camera.style.transition = "all 0.3s ease-in";
+    camera.style.display = "flex";
+    isCameraOn = false;
+  } else {
+    camera.style.display = "none";
+    isCameraOn = true;
+  }
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+    cameraFeed.srcObject = stream;
+  } catch (error) {
+    console.error("Camera access denied:", error);
+    alert("Camera access allow karo");
+  }
+})
+
 // https://wallpapercat.com/w/full/8/e/7/607651-3840x2160-desktop-4k-sports-car-background-image.jpg
