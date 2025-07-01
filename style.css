@@ -994,7 +994,11 @@ h1 {
   position: absolute;
   /* background-color: rgba(0, 0, 0, 0.653);
   bac */
-  background-color: rgba(49, 44, 44, 0.436);
+  /* background-color: rgba(49, 44, 44, 0.436); */
+  background-image: url("https://thumb.photo-ac.com/29/2937bf22ab85f832aad123be453ba9a3_t.jpeg");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
   backdrop-filter: blur(10px);
   z-index: 9999999;
   /* backdrop-filter: blur(10px); */
@@ -1023,8 +1027,9 @@ h1 {
   border: none;
   height: 55%;
   background-color: transparent;
-  color: white;
-  border: 1px solid rgba(128, 128, 128, 0.361);
+  color: rgb(255, 255, 255);
+  /* border: 3px solid rgba(0, 0, 0, 0.361); */
+  border: 1px solid rgb(91, 72, 72);
   padding: 0px 20px;
   transition: all 0.5s ease-in-out;
   font-size: 20px;
@@ -1076,12 +1081,15 @@ h1 {
   width: 100%;
   backdrop-filter: blur(10px);
   /* border-radius: 20px; */
-  background-color: #202C34;
+   background-image: url("https://thumb.photo-ac.com/29/2937bf22ab85f832aad123be453ba9a3_t.jpeg");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
   /* backdrop-filter: blur(10px); */
   display: flex;
   justify-content: flex-end;
   align-items: center;
-border-bottom: 1.5px solid rgba(128, 128, 128, 0.361);;
+/* border-bottom: 1.5px solid rgba(128, 128, 128, 0.361);; */
 }
 .wallpaperMenuCut i{
   color: white;
@@ -1098,9 +1106,7 @@ border-bottom: 1.5px solid rgba(128, 128, 128, 0.361);;
   background-color: tomato;
 }
 .wallpaperMenu h2 {
-  background: linear-gradient(to right,  red , blue);
-  -webkit-background-clip: text;
-  color: transparent; /* 🔴 important line */
+ 
   font-size: 40px;
   margin-top: 20px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
