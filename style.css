@@ -797,6 +797,9 @@ h1 {
 .settingMMC i:hover {
   background-color: gray;
 }
+.home{
+   background-color: gray;
+}
 .settingRht{
   height: 95%;
   width: 75%;
@@ -824,8 +827,8 @@ h1 {
 .settingRightChild{
   height: 50%;
   background-color: rgba(128, 128, 128, 0.269);
-  width: 45%;
-  margin-top: 20px;
+  width: 49%;
+  margin-top: 3px;
 }
 
 
