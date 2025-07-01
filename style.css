@@ -825,7 +825,7 @@ h1 {
 .calcMinMax{
    height: 30px;
    width: 100%;
-   /* background-color: red */
+   /* background-color: red; */
    text-align: end;
    padding: 1px 3px;
    
@@ -836,9 +836,8 @@ h1 {
   height: 100%;
   width: 10%;
   text-align: center;
+  align-content: center;
   border-radius: 10px;
-  padding-top: 4px;
-  margin-top: 2px;
 }
 .calcMinMax i:hover{
   background-color: tomato;
@@ -1095,7 +1094,7 @@ background-color: rgba(19, 13, 13, 0.402);
    */
    box-shadow: 1px 2px 510px red;
   border-radius: 35px;
-  height: 60%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   width: 30%;
@@ -1128,14 +1127,14 @@ background-color: rgba(19, 13, 13, 0.402);
   height: 70px;
 }
 .LoginName input{
-  height: 12%;
+  height: 15%;
   width: 90%;
   border-radius: 20px;
   background-color: transparent;
   color: white;
   padding: 0px 10px;
   border: 1px solid rgba(128, 128, 128, 0.249);
-  margin-top: 70px;
+  margin-top: 40px;
 }
 .LoginName input:active{
   outline: none;
