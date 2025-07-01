@@ -93,11 +93,13 @@ openCameraBtn.addEventListener("click", async () => {
   reverseArrowmenuBar();
   if (isCameraOn) {
     camera.style.transform = "scale(1)";
-    camera.style.transition = "all 0.3s ease";
+    camera.style.transition = "all 0.3s ease-in";
     camera.style.display = "flex";
     isCameraOn = false;
   } else {
+    camera.style.transform = "scale(0)";
     camera.style.display = "none";
+    camera.style.transition = "all 0.3s ease-out";
     isCameraOn = true;
   }
   try {
@@ -437,9 +439,12 @@ document.addEventListener("contextmenu", function (e) {
   rghtClick.style.top = e.clientY + "px";
   rghtClick.style.left = e.clientX + "px";
   rghtClick.style.scale = 1;
-  rghtClick.style.transition = "all 0.3s ease-in";
+  // rghtClick.style.transition = "all 0.3s ease-in";
 });
 
+document.addEventListener("click", function (e) {
+   rghtClick.style.scale = 0;
+});
 let wallpaperMenuOpen = true;
 let wallaperBtn = document.querySelector(".wallaperBtn");
 let wallpaperMenu = document.querySelector(".wallpaperMenu");
@@ -502,7 +507,9 @@ cameraBtn.addEventListener("click" , async ()=>{
     camera.style.display = "flex";
     isCameraOn = false;
   } else {
+    camera.style.transform = "scale(0)";
     camera.style.display = "none";
+     camera.style.transition = "all 0.3s ease-out";
     isCameraOn = true;
   }
   try {
