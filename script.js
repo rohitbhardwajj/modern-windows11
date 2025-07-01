@@ -92,7 +92,7 @@ let isCameraOn = true;
 openCameraBtn.addEventListener("click", async () => {
   reverseArrowmenuBar();
   if (isCameraOn) {
-    // camera.style.transform = "scale(1)";
+    camera.style.transform = "scale(1)";
     camera.style.transition = "all 0.3s ease";
     camera.style.display = "flex";
     isCameraOn = false;
@@ -112,7 +112,7 @@ openCameraBtn.addEventListener("click", async () => {
 faminus.addEventListener("click", () => {
   reverseArrowmenuBar();
   camera.style.transform = "scale(0)";
-  camera.style.transition = "all 0.3s ease";
+  camera.style.transition = "all 0.3s ease-out";
   camera.style.position = "absolute";
   camera.style.display = "block";
   isMinimized = true;
@@ -151,6 +151,10 @@ faexpand.addEventListener("click", () => {
   }
 });
 
+
+
+
+
 famoon.addEventListener("click", () => {
   overlay.style.opacity = "1";
   overlay.style.display = "block";
@@ -158,6 +162,8 @@ famoon.addEventListener("click", () => {
   camera.style.transition = "all 0.3s ease";
   camera.style.backgroundColor = "red";
 });
+
+
 
 let isBatterysaveon = true;
 battery.addEventListener("click", () => {
@@ -491,7 +497,7 @@ let cameraBtn = document.querySelector(".cameraBtn");
 
 cameraBtn.addEventListener("click" , async ()=>{
   if (isCameraOn) {
-    // camera.style.transform = "scale(1)";
+    camera.style.transform = "scale(1)";
     camera.style.transition = "all 0.3s ease-in";
     camera.style.display = "flex";
     isCameraOn = false;
