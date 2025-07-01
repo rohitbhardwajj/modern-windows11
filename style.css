@@ -170,6 +170,7 @@ body {
   top: 0%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .cameraTopBarLft {
   width: 20%;
@@ -180,10 +181,10 @@ body {
   align-items: center;
 }
 .cameraTopBarLft img {
-  height: 30px;
+  height: 25px;
 }
 .cameraTopBarLft h6 {
-  font-size: 15px;
+  font-size: 17px;
   margin-left: 10px;
   color: white;
 }
@@ -192,7 +193,7 @@ body {
   height: 100%;
   /* background-color: rgb(128, 0, 0); */
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   /* z-index: 9999; */
 }
@@ -200,8 +201,13 @@ body {
   color: white;
   /* background-color: red; */
   padding: 10px;
-
+width: 100%;
+align-content: center;
+text-align: center;
   border-right: 1px solid rgba(128, 128, 128, 0.518);
+}
+.cameraX:hover{
+  background-color: red !important;
 }
 .cameraTopBarRht i:hover {
   background-color: gray;
@@ -875,6 +881,7 @@ h1 {
   border: none;
   z-index: 9999;
   transition: all 0.2s ease;
+
   
 }
 .calcButtonsAll button:active{
@@ -900,8 +907,12 @@ h1 {
   width: 25%;
   text-align: center;
    z-index: 99999999999;
-   
+   align-content: center;
+     box-shadow: 5px 5px 10px black;
 
+}
+.calculator ul li:hover{
+  background-color: rgba(128, 128, 128, 0.203);
 }
 .calculator ul li button{
     border-radius: 50%;
@@ -924,17 +935,22 @@ h1 {
 
 .equal{
   background-color: rgb(255, 98, 0) !important;
-  width: 170% !important;
+  width: 90% !important;
   border-radius: none !important;
   margin-left: 10px;
   border-radius: 32px !important;
   font-size: 40px !important;
   
 }
+.eqalBtnul{
+  width: 50% !important;
+}
 .orange{
    background-color: rgb(255, 98, 0)!important;
    font-size: 10px;
    font-weight: 600;
+   align-content: center;
+   text-align: center;
 }
 
 
@@ -977,10 +993,11 @@ h1 {
   position: absolute;
   /* background-color: rgba(0, 0, 0, 0.653);
   bac */
-  background-color: rgba(0, 0, 0, 0.511);
+  background-color: rgba(49, 44, 44, 0.436);
   backdrop-filter: blur(10px);
   z-index: 9999999;
   /* backdrop-filter: blur(10px); */
+  border: 1.5px solid rgba(128, 128, 128, 0.361);;
   top: 20%;
   left: 10%;
   border-radius: 20px;
@@ -1008,9 +1025,15 @@ h1 {
   color: white;
   border: 1px solid rgba(128, 128, 128, 0.361);
   padding: 0px 20px;
+  transition: all 0.5s ease-in-out;
+  font-size: 20px;
+
+  
 }
 .Url input:focus{
   outline: none;
+    box-shadow: -5px -5px 50px rgb(255, 0, 0), 5px 5px 50px blue;
+
 }
 .Url h3{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -1018,18 +1041,25 @@ h1 {
 }
 .wallpaperMenu button{
   padding: 12px 8px;
-  font-size: 15px;
+  font-size: 17px;
   border-radius: 10px;
+  height: 13%;
+  width: 20%;
   cursor: pointer;
   color: white;
-  background-color: rgb(245, 2, 2);
+ /* background :linear-gradient(rgb(255, 0, 0), blue); */
+ background-color: rgb(225, 38, 38);
+ box-shadow: 5px 5px 10px black;
   border: none;
   font-weight: 600;
-  box-shadow: 5px 5px 100px white;
+  /* box-shadow: 5px 5px 100px white; */
   margin-top: 25px;
 }
 .wallpaperMenu button:active{
   scale: 0.8;
+}
+.wallpaperMenu button:hover{
+  box-shadow: -5px -5px 50px rgb(255, 0, 0), 5px 5px 50px blue;
 }
 /* .windowsMenus{
   height: 100%;
@@ -1043,13 +1073,14 @@ h1 {
 .wallpaperMenuCut{
   height: 10%;
   width: 100%;
-background-color: rgba(19, 13, 13, 0.402);
   backdrop-filter: blur(10px);
   /* border-radius: 20px; */
+  background-color: #202C34;
+  /* backdrop-filter: blur(10px); */
   display: flex;
   justify-content: flex-end;
   align-items: center;
-
+border-bottom: 1.5px solid rgba(128, 128, 128, 0.361);;
 }
 .wallpaperMenuCut i{
   color: white;
@@ -1066,12 +1097,14 @@ background-color: rgba(19, 13, 13, 0.402);
   background-color: tomato;
 }
 .wallpaperMenu h2 {
-  background: linear-gradient(to right, red,  rgb(27, 205, 218) , rgb(198, 81, 81) );
+  background: linear-gradient(to right,  red , blue);
   -webkit-background-clip: text;
   color: transparent; /* 🔴 important line */
-  font-size: 30px;
+  font-size: 40px;
   margin-top: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  word-spacing: 1px;
+  letter-spacing: 1px;
 }
 
 
