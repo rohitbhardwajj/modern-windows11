@@ -225,7 +225,6 @@ text-align: center;
 .arrowSectionSplit1 {
   height: 100%;
   width: 70%;
-  /* background-color: green; */
   display: flex;
   justify-content: center;
   align-items: center;
