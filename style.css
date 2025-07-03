@@ -1241,9 +1241,9 @@ h1 {
   /* scale: 0; */
 }
 .fileManagerTopBar{
-  height: 5%;
+  height: 4%;
   width: 100%;
-  background-color: rgb(0, 157, 255);
+  background-color: rgb(90, 94, 97);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1251,12 +1251,13 @@ h1 {
   overflow-x: hidden;
 }
 .fileManagerTopBarPart2{
-  height: 5%;
+  height: 4%;
   width: 100%;
-  background-color: rgb(221, 32, 32);
+  background-color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 10px;
   padding-left: 10px;
   overflow-x: hidden;
 }
@@ -1268,6 +1269,24 @@ h1 {
   justify-content: center;
   align-items: center;
    
+}
+.lftRghtArrow{
+  color: white;
+  /* background-color: red; */
+  height: 100%;
+  width: 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fileManagerTopBarPart2 input{
+  width: 80%;
+ border: 1px solid gray;
+  height: 90%;
+  padding: 0px 15px;
+  background-color: transparent;
+  color: white;
+  margin-top: 1px;
 }
 .fileManagerTopBar h5{
   color: white;
