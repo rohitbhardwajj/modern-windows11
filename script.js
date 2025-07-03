@@ -593,12 +593,14 @@ let filebtn = document.querySelector(".filebtn");
 let isFileManagerOpen =true;
 filebtn.addEventListener("click" , ()=>{
   if(isFileManagerOpen){
-    fileManager.style.scale = 1;
+    fileManager.style.transform = "translateY(0%)";
     fileManager.style.transition = "all 0.3s ease-in";
+    fileManager.style.opacity = 1;
     isFileManagerOpen = false;
   }else{
-     fileManager.style.scale = 0;
+    fileManager.style.transform = "translateY(100%)";
     fileManager.style.transition = "all 0.3s ease-out";
+     fileManager.style.opacity = 0;
     isFileManagerOpen = true;
   }
 })

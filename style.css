@@ -1238,7 +1238,9 @@ h1 {
   width: 100%;
   z-index: 99;
   position: absolute;
-  scale: 0;
+  /* scale: 0; */
+  transform: translateY(100%);
+  opacity: 0;
 }
 .fileManagerTopBar{
   height: 4%;
