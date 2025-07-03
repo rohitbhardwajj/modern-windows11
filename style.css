@@ -1258,12 +1258,41 @@ h1 {
 }
 .midLft{
   height: 100%;
-  width: 25%;
+  width: 15%;
   background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.midLft ul{
+  height: 100%;
+  width: 100%;
+}
+
+.midLft ul li {
+  /* background-color: #04537C; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  /* border-bottom: 1px solid rgb(108, 101, 101) ; */
+}
+.midLft ul li img{
+  height: 20px;
+  
+}
+.optionDeafult{
+  background-color: red;
+}
+select{
+  width: 90%;
+  background-color: transparent;
+  border: none;
 }
 .midRht{
   height: 100%;
-  width: 75%;
+  width: 85%;
   background-color: pink;
 }
 .fileManagerTopBarPart2{
@@ -1298,7 +1327,7 @@ h1 {
 .fileManagerTopBarPart2 input{
   width: 80%;
  border: 1px solid gray;
-  height: 90%;
+  height: 85%;
   padding: 0px 15px;
   background-color: transparent;
   color: white;
