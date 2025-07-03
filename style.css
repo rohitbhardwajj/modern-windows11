@@ -1232,7 +1232,14 @@ h1 {
   scale: 0.9;
 }
 
-
+.fileManager{
+  height: 100%;
+  background-color: red;
+  width: 100%;
+  z-index: 99;
+  position: absolute;
+  scale: 1;
+}
 
 
 

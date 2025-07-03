@@ -566,28 +566,34 @@ let CarVideoWallpaper = document.querySelector(".img");
 
 
 
-LoginBtn.addEventListener("click", () => {
-  if (LogInput.value.trim() !== "") {
-    LoginName.style.display = "none";
-    LoginVideo.style.display = "flex";
-    Loginvdo.play();
+// LoginBtn.addEventListener("click", () => {
+//   if (LogInput.value.trim() !== "") {
+//     LoginName.style.display = "none";
+//     LoginVideo.style.display = "flex";
+//     Loginvdo.play();
 
 
    
-    Loginvdo.addEventListener("ended", () => {
-      LoginVideo.style.transition = "all 0.3s ease-out";
-      LoginVideo.style.display = "none";
-      CarVideoWallpaper.play();
-      CarVideoWallpaper.muted = true;
-      CarVideoWallpaper.loop = true;
-    });
+//     Loginvdo.addEventListener("ended", () => {
+//       LoginVideo.style.transition = "all 0.3s ease-out";
+//       LoginVideo.style.display = "none";
+//       CarVideoWallpaper.play();
+//       CarVideoWallpaper.muted = true;
+//       CarVideoWallpaper.loop = true;
+//     });
 
-  } else {
-    alert("Abe Jab Kehra hu Name Enter kar 😡😡😡😡");
-  }
-});
+//   } else {
+//     alert("Abe Jab Kehra hu Name Enter kar 😡😡😡😡");
+//   }
+// });
 
+let fileManager = document.querySelector(".fileManager");
+let filebtn = document.querySelector(".filebtn");
 
+filebtn.addEventListener("click" , ()=>{
+    fileManager.style.scale = 0;
+    fileManager.style.transition = "all 0.3s ease-in";
+})
  
 
 
