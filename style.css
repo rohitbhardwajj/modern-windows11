@@ -1234,11 +1234,55 @@ h1 {
 
 .fileManager{
   height: 100%;
-  background-color: red;
+  background-color: rgb(0, 0, 0);
   width: 100%;
   z-index: 99;
   position: absolute;
-  scale: 1;
+  /* scale: 0; */
+}
+.fileManagerTopBar{
+  height: 5%;
+  width: 100%;
+  background-color: rgb(0, 157, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  overflow-x: hidden;
+}
+.fileManagerTopBarPart2{
+  height: 5%;
+  width: 100%;
+  background-color: rgb(221, 32, 32);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  overflow-x: hidden;
+}
+.cutMinMaxFile{
+  height: 100%;
+  width: 6%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   
+}
+.fileManagerTopBar h5{
+  color: white;
+  font-size: 12px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.cutMinMaxFile i{
+  /* background-color: black; */
+  color: white;
+  height: 100%;
+  padding: 0px 7px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 

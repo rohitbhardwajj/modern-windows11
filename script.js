@@ -590,9 +590,17 @@ let CarVideoWallpaper = document.querySelector(".img");
 let fileManager = document.querySelector(".fileManager");
 let filebtn = document.querySelector(".filebtn");
 
+let isFileManagerOpen =true;
 filebtn.addEventListener("click" , ()=>{
-    fileManager.style.scale = 0;
+  if(isFileManagerOpen){
+    fileManager.style.scale = 1;
     fileManager.style.transition = "all 0.3s ease-in";
+    isFileManagerOpen = false;
+  }else{
+     fileManager.style.scale = 0;
+    fileManager.style.transition = "all 0.3s ease-out";
+    isFileManagerOpen = true;
+  }
 })
  
 
