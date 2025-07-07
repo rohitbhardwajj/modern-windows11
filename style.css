@@ -389,10 +389,6 @@ h1 {
 }
 
 .microSoftStoreEnd {
-  /* background-color: rgba(18, 16, 16, 0.906);
-  back */
-  /* background-color: rgb(24, 23, 23);
-   */
    background-color: black;
   display: flex;
     backdrop-filter: blur(10px);
